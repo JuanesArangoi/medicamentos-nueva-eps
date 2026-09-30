@@ -814,3 +814,28 @@ window.printAcademicReport = function() {
   document.querySelectorAll('.accordion-item').forEach(item => item.classList.add('open'));
   window.print();
 };
+
+// Control del Modal de Pitch
+window.openPitchModal = function() {
+  const modal = document.getElementById('pitch-modal');
+  if (modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closePitchModal = function() {
+  const modal = document.getElementById('pitch-modal');
+  if (modal) {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+};
+
+// Cerrar modal al hacer clic en el fondo oscuro o presionar Escape
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePitchModal();
+  }
+});
+

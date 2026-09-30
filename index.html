@@ -15,11 +15,6 @@
     <div>
       <span>🇨🇴 República de Colombia | Sistema General de Seguridad Social en Salud (SGSSS)</span>
     </div>
-    <div class="top-bar-links">
-      <span class="badge badge-success" style="font-size: 0.75rem;">Servicio Cloud 24/7 Activo (SLA 99.94%)</span>
-      <span>•</span>
-      <span>Vigilado SuperSalud</span>
-    </div>
   </div>
 
   <!-- Header Principal con Marca Nueva EPS -->
@@ -37,8 +32,8 @@
         <button id="toggle-accessibility" class="btn btn-outline btn-sm" title="Aumentar contraste y tipografía para personas mayores">
           <span>👓 Modo Adulto Mayor / Accesible</span>
         </button>
-        <button onclick="printAcademicReport()" class="btn btn-primary btn-sm">
-          <span>📄 Exportar Informe Técnico (PDF)</span>
+        <button onclick="openPitchModal()" class="btn btn-primary btn-sm" id="btn-pitch" title="Abrir guión y cronómetro del pitch para 3 integrantes">
+          <span>🎤 Pitch</span>
         </button>
       </div>
     </div>
@@ -62,18 +57,13 @@
           </button>
         </li>
         <li>
-          <button class="tab-btn" data-tab="pitch">
-            <span>🎤 4. Pitch de Sustentación (3 Integrantes)</span>
+          <button class="tab-btn" data-tab="prototipo">
+            <span>📱 4. Prototipo Interactivo (Portal en 3 Clics)</span>
           </button>
         </li>
         <li>
           <button class="tab-btn" data-tab="bibliografia">
             <span>📚 5. Bibliografía & Benchmark de Proyectos</span>
-          </button>
-        </li>
-        <li>
-          <button class="tab-btn" data-tab="prototipo">
-            <span>📱 6. Prototipo Interactivo (Portal en 3 Clics)</span>
           </button>
         </li>
       </ul>
@@ -920,275 +910,7 @@
 
 
     <!-- =========================================================================
-         PESTAÑA 4: PITCH DE SUSTENTACIÓN (EQUIPO DE 3 INTEGRANTES)
-         ========================================================================= -->
-    <div id="tab-pitch" class="tab-panel">
-      
-      <div class="alert-banner">
-        <div class="alert-banner-content">
-          <h3>🎤 Pitch de Sustentación Ejecutiva ante la Junta Directiva</h3>
-          <p>
-            Estructura cronometrada para <strong>3 INTEGRANTES</strong> con una duración total de <strong>4 minutos y 30 segundos</strong> (dentro del rango de 3 a 5 min). 
-            Incluye guión textual palabra por palabra, roles asignados, apoyos visuales y temporizador interactivo de ensayo.
-          </p>
-        </div>
-        <div>
-          <span class="badge badge-success">Junta Directiva Nueva EPS</span>
-        </div>
-      </div>
-
-      <!-- Temporizador del Pitch -->
-      <div class="pitch-timer-bar">
-        <div>
-          <span style="font-size: 0.85rem; color: #93c5fd; text-transform: uppercase; font-weight: 700;">Cronómetro de Ensayo del Video (Meta: 3 a 5 min)</span>
-          <div class="timer-digits" id="timer-display">05:00</div>
-          <div id="timer-active-speaker" style="font-size: 0.88rem; color: #e2e8f0; margin-top: 4px;">
-            Presiona 'Iniciar' para cronometrar las intervenciones.
-          </div>
-        </div>
-        <div style="display: flex; gap: 10px; align-items: center;">
-          <button id="btn-timer-start" class="btn btn-accent">▶️ Iniciar Pitch</button>
-          <button id="btn-timer-reset" class="btn btn-outline" style="color: white; border-color: #64748b;">🔄 Reiniciar</button>
-        </div>
-      </div>
-
-      <!-- Integrante 1 -->
-      <div class="pitch-speaker-card" style="border-left: 5px solid var(--primary);">
-        <div class="pitch-speaker-header">
-          <div class="speaker-meta">
-            <div class="speaker-badge-num">1</div>
-            <div class="speaker-name-role">
-              <h4>INTEGRANTE 1: Contexto, Problemática Real y Dimensión Humana</h4>
-              <span>Rol: Director de Transformación y Experiencia del Paciente | ⏱️ Tiempo: 1 minuto y 20 segundos (00:00 - 01:20)</span>
-            </div>
-          </div>
-          <span class="badge badge-primary">Fase 1: Personas & Flujo</span>
-        </div>
-
-        <div class="speech-box">
-          <p>
-            <em>"Buenos días, miembros de la Junta Directiva. Hoy no venimos a presentarles simplemente una aplicación móvil, venimos a resolver la herida más profunda en la reputación y operación de la Nueva EPS: <strong>las interminables filas de hasta 4 horas que sufren nuestros millones de pacientes para reclamar sus medicamentos</strong>, solo para escuchar al final de la ventanilla un frustrante: 'vuelva la próxima semana porque no hay stock'.</em>
-          </p>
-          <p style="margin-top: 8px;">
-            <em>Este modelo manual y fragmentado le cuesta a la EPS miles de millones de pesos en demandas, tutelas y sanciones de la Superintendencia Nacional de Salud, además de deteriorar la adherencia clínica de nuestros pacientes crónicos. Aplicando la primera dimensión de <strong>ITIL 4, Organizaciones y Personas</strong>, y el mapeo de flujos de valor, identificamos que el 90% del tiempo de un paciente en farmacia es desperdicio puro: esperas a ciegas y traslados infructuosos.</em>
-          </p>
-          <p style="margin-top: 8px;">
-            <em>Nuestra solución no impone tecnología por capricho. Estructuramos un plan de gestión del cambio bajo el marco <strong>ADKAR</strong> para los regentes de farmacia de Audifarma, Cafam y Cruz Verde, transformando al dispensador de un receptor pasivo de reclamos a un facilitador del servicio con un flujo de atención previamente organizado desde la nube."</em>
-          </p>
-        </div>
-
-        <div class="speech-tips">
-          <div><strong>📽️ Diapositiva:</strong> Fotos reales de filas en dispensarios vs. Flujo As-Is (210 min perdidos).</div>
-          <div><strong>💡 Consejo de Oratoria:</strong> Tono empático y enérgico. Mirar a la cámara con convicción.</div>
-        </div>
-      </div>
-
-      <!-- Integrante 2 -->
-      <div class="pitch-speaker-card" style="border-left: 5px solid var(--secondary);">
-        <div class="pitch-speaker-header">
-          <div class="speaker-meta">
-            <div class="speaker-badge-num">2</div>
-            <div class="speaker-name-role">
-              <h4>INTEGRANTE 2: Arquitectura Tecnológica, 7 Principios ITIL 4 y Demostración</h4>
-              <span>Rol: Arquitecto Principal de Soluciones TIC | ⏱️ Tiempo: 1 minuto y 40 segundos (01:20 - 03:00)</span>
-            </div>
-          </div>
-          <span class="badge badge-info">Fase 2: Arquitectura & Demo</span>
-        </div>
-
-        <div class="speech-box">
-          <p>
-            <em>"Gracias. Para materializar esta visión sin incurrir en costos astronómicos, nos basamos en el principio ITIL <strong>'Empezar donde se está'</strong>. Nueva EPS no necesita cambiar el software de inventario de cada farmacia aliada. Diseñamos una <strong>arquitectura desacoplada en la nube (AWS) con un Middleware de Integración</strong> que consume en tiempo real los inventarios de Audifarma, Cafam y Cruz Verde mediante APIs seguras bajo el estándar internacional <strong>HL7 FHIR</strong>.</em>
-          </p>
-          <p style="margin-top: 8px;">
-            <em>Siguiendo el principio <strong>'Mantenerlo simple y práctico'</strong>, creamos una experiencia inclusiva de <strong>solo 3 clics</strong> pensada para adultos mayores: 1) El paciente ingresa su documento, 2) Visualiza en un semáforo interactivo en tiempo real en qué farmacia cercana hay existencias reales hoy, y 3) Reserva su dosis obteniendo un <strong>Turno Digital Express con código QR</strong> y confirmación automática por WhatsApp.</em>
-          </p>
-          <p style="margin-top: 8px;">
-            <em>Además, con el principio <strong>'Optimizar y automatizar'</strong>, si un medicamento se agota, el sistema activa alertas tempranas de reabastecimiento en bodega y notifica automáticamente al celular del usuario cuando el lote ingresa al dispensario. Esta plataforma es completamente funcional y está desplegada en producción sobre GitHub Pages y microservicios Cloud."</em>
-          </p>
-        </div>
-
-        <div class="speech-tips">
-          <div><strong>📽️ Diapositiva:</strong> Compartir pantalla mostrando la Pestaña 6 (Prototipo Interactivo en 3 clics y tique QR).</div>
-          <div><strong>💡 Consejo de Oratoria:</strong> Tono fluido, interactuando en vivo con la web para cautivar a la audiencia.</div>
-        </div>
-      </div>
-
-      <!-- Integrante 3 -->
-      <div class="pitch-speaker-card" style="border-left: 5px solid var(--accent-green);">
-        <div class="pitch-speaker-header">
-          <div class="speaker-meta">
-            <div class="speaker-badge-num">3</div>
-            <div class="speaker-name-role">
-              <h4>INTEGRANTE 3: SLAs, Indicadores KPIs, Retorno de Inversión y Cierre</h4>
-              <span>Rol: Director de Calidad, SRE y Gobierno de Proyectos TIC | ⏱️ Tiempo: 1 minuto y 30 segundos (03:00 - 04:30)</span>
-            </div>
-          </div>
-          <span class="badge badge-success">Fase 3: SLAs, ROI & Cierre</span>
-        </div>
-
-        <div class="speech-box">
-          <p>
-            <em>"Para garantizar que este servicio opere con calidad empresarial 24/7, establecimos <strong>Acuerdos de Nivel de Servicio (SLAs) rigurosos</strong>: una disponibilidad de plataforma garantizada del <strong>99.9%</strong> con tolerancia a fallas multizona, tiempos de respuesta de consulta menores a 1.5 segundos y un RTO de contingencia menor a 15 minutos.</em>
-          </p>
-          <p style="margin-top: 8px;">
-            <em>Los resultados de nuestros Indicadores Clave de Gestión (KPIs) en la fase piloto son contundentes:</em>
-            <br>• <em><strong>Redujimos las filas presenciales en un 64.2%</strong>, superando la meta del 60% exigida por el negocio.</em>
-            <br>• <em>Alcanzamos una <strong>exactitud de inventario del 98.6%</strong> entre el dato digital y las existencias físicas en bodega.</em>
-            <br>• <em>Y elevamos la satisfacción del paciente (CSAT) del 38% al <strong>91.4%</strong>.</em>
-          </p>
-          <p style="margin-top: 8px;">
-            <em>Señores de la Junta: Este proyecto no es un gasto, es una <strong>inversión de alto impacto con un ROI tangible</strong>: por cada peso invertido en la nube, la EPS se ahorra más de \$3.5 pesos en costos de atención presencial, multas de la Superintendencia y complicaciones de pacientes que antes abandonaban su terapia. Tenemos el diagnóstico holístico, la tecnología probada y el gobierno de ITIL 4 listo para su despliegue nacional. Los invitamos a aprobar su financiamiento. ¡Muchas gracias!"</em>
-          </p>
-        </div>
-
-        <div class="speech-tips">
-          <div><strong>📽️ Diapositiva:</strong> Gráficas de KPIs de la Pestaña 3 y cuadro de Retorno de Inversión (350% ROI).</div>
-          <div><strong>💡 Consejo de Oratoria:</strong> Cierre firme, convincente y con llamado claro a la acción ejecutiva.</div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- =========================================================================
-         PESTAÑA 5: BIBLIOGRAFÍA & BENCHMARK DE PROYECTOS SIMILARES
-         ========================================================================= -->
-    <div id="tab-bibliografia" class="tab-panel">
-      
-      <div class="alert-banner">
-        <div class="alert-banner-content">
-          <h3>📚 Referencias Bibliográficas y Benchmark de Proyectos Similares</h3>
-          <p>
-            Fundamentación científica y normativa en formato APA 7.ª Edición y análisis comparativo con proyectos líderes del sector farmacéutico 
-            y de salud digital en Colombia y el mundo.
-          </p>
-        </div>
-        <div>
-          <span class="badge badge-primary">APA 7.ª Edición</span>
-        </div>
-      </div>
-
-      <!-- Benchmark -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">🔍 Benchmark de Proyectos Similares y Lecciones de Ingeniería</h3>
-          <span class="badge badge-info">Investigación de Referentes</span>
-        </div>
-
-        <div class="table-responsive">
-          <table class="academic-table">
-            <thead>
-              <tr>
-                <th>Proyecto / Plataforma</th>
-                <th>Ámbito / País</th>
-                <th>Acierto Tecnológico</th>
-                <th>Falla / Oportunidad Detectada</th>
-                <th>Mejora Aplicada en Nuestra Solución</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>MiAudifarma (Audifarma S.A.)</strong></td>
-                <td>Colombia (Nacional)</td>
-                <td>Implementación de turnos virtuales y solicitud de turnos para dispensación presencial.</td>
-                <td>Desincronización recurrente entre el turno virtual y las existencias reales en ventanilla física; caída de la app en horas pico.</td>
-                <td>Implementación de <strong>reserva obligatoria de stock en caché Redis</strong> al momento de generar el turno express para evitar reclamos vacíos.</td>
-              </tr>
-              <tr>
-                <td><strong>Cruz Verde Express</strong></td>
-                <td>Colombia y Chile</td>
-                <td>Casilleros inteligentes (Smart Lockers) y retiro programado en tienda.</td>
-                <td>Orientado principalmente a la venta comercial y no al flujo de prescripciones complejas del POS/PBS con múltiples autorizaciones.</td>
-                <td>Integración directa con el módulo <strong>MIPRES y ADRES</strong> para validación inmediata de topes y derechos sin requerir pagos extras.</td>
-              </tr>
-              <tr>
-                <td><strong>NHS Electronic Prescription Service (EPS)</strong></td>
-                <td>Reino Unido (National Health Service)</td>
-                <td>Trazabilidad integral nacional de recetas electrónicas de extremo a extremo entre médicos y farmacias comunitarias.</td>
-                <td>Curva de adopción compleja inicial para poblaciones de la tercera edad y alta dependencia de infraestructura hospitalaria.</td>
-                <td>Adopción de la <strong>regla de los 3 clics y canal de WhatsApp</strong> para garantizar accesibilidad absoluta a poblaciones de adultos mayores.</td>
-              </tr>
-              <tr>
-                <td><strong>CVS Pharmacy / Walgreens Rx Tracker</strong></td>
-                <td>Estados Unidos</td>
-                <td>Notificaciones en tiempo real vía SMS y geolocalización predictiva de medicamentos desabastecidos.</td>
-                <td>Altos costos de licenciamiento propietario y plataformas cerradas no interoperables.</td>
-                <td>Uso de <strong>estándares abiertos HL7 FHIR y microservicios Cloud</strong> con arquitectura altamente económica y escalable.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Bibliografía APA 7 -->
-      <div class="card">
-        <h3 class="card-title" style="margin-bottom: 14px;">📖 Bibliografía Académica y Normativa Oficial</h3>
-
-        <div class="biblio-card">
-          <div class="biblio-title">1. Marco Metodológico Central de Gestión de Servicios TIC</div>
-          <div class="biblio-citation">
-            Axelos. (2019). <em>ITIL Foundation: ITIL 4 Edition</em>. TSO (The Stationery Office). Norwich, Reino Unido. ISBN: 978-0113316076.
-          </div>
-          <div class="biblio-relevance">
-            Aporte: Estructuración de las 4 Dimensiones del Servicio y los 7 Principios Guía aplicados a la reingeniería de Nueva EPS.
-          </div>
-        </div>
-
-        <div class="biblio-card">
-          <div class="biblio-title">2. Estándar Global de Interoperabilidad en Salud</div>
-          <div class="biblio-citation">
-            HL7 International. (2023). <em>Fast Healthcare Interoperability Resources (FHIR) Release 5</em>. Ann Arbor, MI. Recuperado de <a href="https://hl7.org/fhir/" target="_blank" style="color: var(--secondary);">https://hl7.org/fhir/</a>
-          </div>
-          <div class="biblio-relevance">
-            Aporte: Definición del modelo de datos e intercambio de APIs para recursos de prescripción y dispensación farmacológica.
-          </div>
-        </div>
-
-        <div class="biblio-card">
-          <div class="biblio-title">3. Normativa Sanitaria Colombiana para Fórmulas y Medicamentos</div>
-          <div class="biblio-citation">
-            Ministerio de Salud y Protección Social de Colombia. (2020). <em>Resolución 521 de 2020: Procedimiento de entrega de medicamentos a domicilio y prescripción digital</em>. Diario Oficial No. 51.270. Bogotá D.C.
-          </div>
-          <div class="biblio-relevance">
-            Aporte: Marco regulatorio que habilita la entrega domiciliaria prioritaria a mayores de 70 años y teleorientación en salud.
-          </div>
-        </div>
-
-        <div class="biblio-card">
-          <div class="biblio-title">4. Ley de Protección de Datos Personales en Colombia</div>
-          <div class="biblio-citation">
-            Congreso de la República de Colombia. (2012). <em>Ley Estatutaria 1581 de 2012: Régimen General de Protección de Datos Personales (Habeas Data)</em>. Bogotá D.C.
-          </div>
-          <div class="biblio-relevance">
-            Aporte: Criterios legales para el tratamiento seguro de datos médicos sensibles, cifrado AES-256 y anonimización de diagnósticos CIE-10.
-          </div>
-        </div>
-
-        <div class="biblio-card">
-          <div class="biblio-title">5. Estándares Internacionales de Calidad en Servicios de TI</div>
-          <div class="biblio-citation">
-            International Organization for Standardization. (2018). <em>ISO/IEC 20000-1:2018: Information technology — Service management system requirements</em>. Ginebra, Suiza: ISO.
-          </div>
-          <div class="biblio-relevance">
-            Aporte: Formulación de los SLAs de disponibilidad 24/7 (99.9%), tiempos máximos de restauración (MTTR) y gobernanza de incidentes.
-          </div>
-        </div>
-
-        <div class="biblio-card">
-          <div class="biblio-title">6. Transformación Digital e Indicadores de Madurez en Salud</div>
-          <div class="biblio-citation">
-            HIMSS. (2024). <em>Digital Health Indicator (DHI): Governance, Workforce, Interoperability and Person-Enabled Care</em>. Chicago, IL: HIMSS Media.
-          </div>
-          <div class="biblio-relevance">
-            Aporte: Métricas de adopción omnicanal y empoderamiento del paciente en la autogestión de sus tratamientos médicos crónicos.
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- =========================================================================
-         PESTAÑA 6: PROTOTIPO INTERACTIVO DEL SERVICIO (PORTAL EN 3 CLICS)
+         PESTAÑA 4: PROTOTIPO INTERACTIVO DEL SERVICIO (PORTAL EN 3 CLICS)
          ========================================================================= -->
     <div id="tab-prototipo" class="tab-panel">
       
@@ -1347,21 +1069,290 @@
       </div>
     </div>
 
+
+    <!-- =========================================================================
+         PESTAÑA 5: BIBLIOGRAFÍA & BENCHMARK DE PROYECTOS SIMILARES
+         ========================================================================= -->
+    <div id="tab-bibliografia" class="tab-panel">
+      
+      <div class="alert-banner">
+        <div class="alert-banner-content">
+          <h3>📚 Referencias Bibliográficas y Benchmark de Proyectos Similares</h3>
+          <p>
+            Fundamentación científica y normativa en formato APA 7.ª Edición y análisis comparativo con proyectos líderes del sector farmacéutico 
+            y de salud digital en Colombia y el mundo.
+          </p>
+        </div>
+        <div>
+          <span class="badge badge-primary">APA 7.ª Edición</span>
+        </div>
+      </div>
+
+      <!-- Benchmark -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">🔍 Benchmark de Proyectos Similares y Lecciones de Ingeniería</h3>
+          <span class="badge badge-info">Investigación de Referentes</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Proyecto / Plataforma</th>
+                <th>Ámbito / País</th>
+                <th>Acierto Tecnológico</th>
+                <th>Falla / Oportunidad Detectada</th>
+                <th>Mejora Aplicada en Nuestra Solución</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>MiAudifarma (Audifarma S.A.)</strong></td>
+                <td>Colombia (Nacional)</td>
+                <td>Implementación de turnos virtuales y solicitud de turnos para dispensación presencial.</td>
+                <td>Desincronización recurrente entre el turno virtual y las existencias reales en ventanilla física; caída de la app en horas pico.</td>
+                <td>Implementación de <strong>reserva obligatoria de stock en caché Redis</strong> al momento de generar el turno express para evitar reclamos vacíos.</td>
+              </tr>
+              <tr>
+                <td><strong>Cruz Verde Express</strong></td>
+                <td>Colombia y Chile</td>
+                <td>Casilleros inteligentes (Smart Lockers) y retiro programado en tienda.</td>
+                <td>Orientado principalmente a la venta comercial y no al flujo de prescripciones complejas del POS/PBS con múltiples autorizaciones.</td>
+                <td>Integración directa con el módulo <strong>MIPRES y ADRES</strong> para validación inmediata de topes y derechos sin requerir pagos extras.</td>
+              </tr>
+              <tr>
+                <td><strong>NHS Electronic Prescription Service (EPS)</strong></td>
+                <td>Reino Unido (National Health Service)</td>
+                <td>Trazabilidad integral nacional de recetas electrónicas de extremo a extremo entre médicos y farmacias comunitarias.</td>
+                <td>Curva de adopción compleja inicial para poblaciones de la tercera edad y alta dependencia de infraestructura hospitalaria.</td>
+                <td>Adopción de la <strong>regla de los 3 clics y canal de WhatsApp</strong> para garantizar accesibilidad absoluta a poblaciones de adultos mayores.</td>
+              </tr>
+              <tr>
+                <td><strong>CVS Pharmacy / Walgreens Rx Tracker</strong></td>
+                <td>Estados Unidos</td>
+                <td>Notificaciones en tiempo real vía SMS y geolocalización predictiva de medicamentos desabastecidos.</td>
+                <td>Altos costos de licenciamiento propietario y plataformas cerradas no interoperables.</td>
+                <td>Uso de <strong>estándares abiertos HL7 FHIR y microservicios Cloud</strong> con arquitectura altamente económica y escalable.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Bibliografía APA 7 -->
+      <div class="card">
+        <h3 class="card-title" style="margin-bottom: 14px;">📖 Bibliografía Académica y Normativa Oficial</h3>
+
+        <div class="biblio-card">
+          <div class="biblio-title">1. Marco Metodológico Central de Gestión de Servicios TIC</div>
+          <div class="biblio-citation">
+            Axelos. (2019). <em>ITIL Foundation: ITIL 4 Edition</em>. TSO (The Stationery Office). Norwich, Reino Unido. ISBN: 978-0113316076.
+          </div>
+          <div class="biblio-relevance">
+            Aporte: Estructuración de las 4 Dimensiones del Servicio y los 7 Principios Guía aplicados a la reingeniería de Nueva EPS.
+          </div>
+        </div>
+
+        <div class="biblio-card">
+          <div class="biblio-title">2. Estándar Global de Interoperabilidad en Salud</div>
+          <div class="biblio-citation">
+            HL7 International. (2023). <em>Fast Healthcare Interoperability Resources (FHIR) Release 5</em>. Ann Arbor, MI. Recuperado de <a href="https://hl7.org/fhir/" target="_blank" style="color: var(--secondary);">https://hl7.org/fhir/</a>
+          </div>
+          <div class="biblio-relevance">
+            Aporte: Definición del modelo de datos e intercambio de APIs para recursos de prescripción y dispensación farmacológica.
+          </div>
+        </div>
+
+        <div class="biblio-card">
+          <div class="biblio-title">3. Normativa Sanitaria Colombiana para Fórmulas y Medicamentos</div>
+          <div class="biblio-citation">
+            Ministerio de Salud y Protección Social de Colombia. (2020). <em>Resolución 521 de 2020: Procedimiento de entrega de medicamentos a domicilio y prescripción digital</em>. Diario Oficial No. 51.270. Bogotá D.C.
+          </div>
+          <div class="biblio-relevance">
+            Aporte: Marco regulatorio que habilita la entrega domiciliaria prioritaria a mayores de 70 años y teleorientación en salud.
+          </div>
+        </div>
+
+        <div class="biblio-card">
+          <div class="biblio-title">4. Ley de Protección de Datos Personales en Colombia</div>
+          <div class="biblio-citation">
+            Congreso de la República de Colombia. (2012). <em>Ley Estatutaria 1581 de 2012: Régimen General de Protección de Datos Personales (Habeas Data)</em>. Bogotá D.C.
+          </div>
+          <div class="biblio-relevance">
+            Aporte: Criterios legales para el tratamiento seguro de datos médicos sensibles, cifrado AES-256 y anonimización de diagnósticos CIE-10.
+          </div>
+        </div>
+
+        <div class="biblio-card">
+          <div class="biblio-title">5. Estándares Internacionales de Calidad en Servicios de TI</div>
+          <div class="biblio-citation">
+            International Organization for Standardization. (2018). <em>ISO/IEC 20000-1:2018: Information technology — Service management system requirements</em>. Ginebra, Suiza: ISO.
+          </div>
+          <div class="biblio-relevance">
+            Aporte: Formulación de los SLAs de disponibilidad 24/7 (99.9%), tiempos máximos de restauración (MTTR) y gobernanza de incidentes.
+          </div>
+        </div>
+
+        <div class="biblio-card">
+          <div class="biblio-title">6. Transformación Digital e Indicadores de Madurez en Salud</div>
+          <div class="biblio-citation">
+            HIMSS. (2024). <em>Digital Health Indicator (DHI): Governance, Workforce, Interoperability and Person-Enabled Care</em>. Chicago, IL: HIMSS Media.
+          </div>
+          <div class="biblio-relevance">
+            Aporte: Métricas de adopción omnicanal y empoderamiento del paciente en la autogestión de sus tratamientos médicos crónicos.
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
-  <!-- Footer -->
+  <!-- =========================================================================
+       MODAL FLOTANTE INTERACTIVO PARA EL PITCH DE SUSTENTACIÓN (3 INTEGRANTES)
+       ========================================================================= -->
+  <div id="pitch-modal" class="modal-backdrop" onclick="if(event.target === this) closePitchModal();">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pitch-modal-title">
+      <div class="modal-header">
+        <h3 id="pitch-modal-title">🎤 Pitch de Sustentación Ejecutiva ante la Junta Directiva</h3>
+        <button class="modal-close-btn" onclick="closePitchModal()" title="Cerrar ventana del pitch">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert-banner" style="margin-bottom: 16px;">
+          <div class="alert-banner-content">
+            <h4 style="color: var(--primary);">⏱️ Duración Reglamentaria: 4:30 minutos (Rango 3 a 5 min) • 3 Integrantes</h4>
+            <p>
+              Intervenciones balanceadas con guión textual palabra por palabra, roles ejecutivos asignados, diapositivas sugeridas 
+              y cronómetro interactivo para ensayar la grabación de su video ante la Junta Directiva.
+            </p>
+          </div>
+        </div>
+
+        <!-- Temporizador del Pitch -->
+        <div class="pitch-timer-bar">
+          <div>
+            <span style="font-size: 0.85rem; color: #93c5fd; text-transform: uppercase; font-weight: 700;">Cronómetro de Ensayo del Video (Meta: 3 a 5 min)</span>
+            <div class="timer-digits" id="timer-display">05:00</div>
+            <div id="timer-active-speaker" style="font-size: 0.88rem; color: #e2e8f0; margin-top: 4px;">
+              Presiona 'Iniciar' para cronometrar las intervenciones.
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <button id="btn-timer-start" class="btn btn-accent">▶️ Iniciar Pitch</button>
+            <button id="btn-timer-reset" class="btn btn-outline" style="color: white; border-color: #64748b;">🔄 Reiniciar</button>
+          </div>
+        </div>
+
+        <!-- Integrante 1 -->
+        <div class="pitch-speaker-card" style="border-left: 5px solid var(--primary); margin-bottom: 16px;">
+          <div class="pitch-speaker-header">
+            <div class="speaker-meta">
+              <div class="speaker-badge-num">1</div>
+              <div class="speaker-name-role">
+                <h4>INTEGRANTE 1: Contexto, Problemática Real y Dimensión Humana</h4>
+                <span>Rol: Director de Transformación y Experiencia del Paciente | ⏱️ Tiempo: 1 minuto y 20 segundos (00:00 - 01:20)</span>
+              </div>
+            </div>
+            <span class="badge badge-primary">Fase 1: Personas & Flujo</span>
+          </div>
+
+          <div class="speech-box">
+            <p>
+              <em>"Buenos días, miembros de la Junta Directiva. Hoy no venimos a presentarles simplemente una aplicación móvil, venimos a resolver la herida más profunda en la reputación y operación de la Nueva EPS: <strong>las interminables filas de hasta 4 horas que sufren nuestros millones de pacientes para reclamar sus medicamentos</strong>, solo para escuchar al final de la ventanilla un frustrante: 'vuelva la próxima semana porque no hay stock'.</em>
+            </p>
+            <p style="margin-top: 8px;">
+              <em>Este modelo manual y fragmentado le cuesta a la EPS miles de millones de pesos en demandas, tutelas y sanciones de la Superintendencia Nacional de Salud, además de deteriorar la adherencia clínica de nuestros pacientes crónicos. Aplicando la primera dimensión de <strong>ITIL 4, Organizaciones y Personas</strong>, y el mapeo de flujos de valor, identificamos que el 90% del tiempo de un paciente en farmacia es desperdicio puro: esperas a ciegas y traslados infructuosos.</em>
+            </p>
+            <p style="margin-top: 8px;">
+              <em>Nuestra solución no impone tecnología por capricho. Estructuramos un plan de gestión del cambio bajo el marco <strong>ADKAR</strong> para los regentes de farmacia de Audifarma, Cafam y Cruz Verde, transformando al dispensador de un receptor pasivo de reclamos a un facilitador del servicio con un flujo de atención previamente organizado desde la nube."</em>
+            </p>
+          </div>
+
+          <div class="speech-tips">
+            <div><strong>📽️ Diapositiva:</strong> Fotos reales de filas en dispensarios vs. Flujo As-Is (210 min perdidos).</div>
+            <div><strong>💡 Consejo de Oratoria:</strong> Tono empático y enérgico. Mirar a la cámara con convicción.</div>
+          </div>
+        </div>
+
+        <!-- Integrante 2 -->
+        <div class="pitch-speaker-card" style="border-left: 5px solid var(--secondary); margin-bottom: 16px;">
+          <div class="pitch-speaker-header">
+            <div class="speaker-meta">
+              <div class="speaker-badge-num">2</div>
+              <div class="speaker-name-role">
+                <h4>INTEGRANTE 2: Arquitectura Tecnológica, 7 Principios ITIL 4 y Demostración</h4>
+                <span>Rol: Arquitecto Principal de Soluciones TIC | ⏱️ Tiempo: 1 minuto y 40 segundos (01:20 - 03:00)</span>
+              </div>
+            </div>
+            <span class="badge badge-info">Fase 2: Arquitectura & Demo</span>
+          </div>
+
+          <div class="speech-box">
+            <p>
+              <em>"Gracias. Para materializar esta visión sin incurrir en costos astronómicos, nos basamos en el principio ITIL <strong>'Empezar donde se está'</strong>. Nueva EPS no necesita cambiar el software de inventario de cada farmacia aliada. Diseñamos una <strong>arquitectura desacoplada en la nube (AWS) con un Middleware de Integración</strong> que consume en tiempo real los inventarios de Audifarma, Cafam y Cruz Verde mediante APIs seguras bajo el estándar internacional <strong>HL7 FHIR</strong>.</em>
+            </p>
+            <p style="margin-top: 8px;">
+              <em>Siguiendo el principio <strong>'Mantenerlo simple y práctico'</strong>, creamos una experiencia inclusiva de <strong>solo 3 clics</strong> pensada para adultos mayores: 1) El paciente ingresa su documento, 2) Visualiza en un semáforo interactivo en tiempo real en qué farmacia cercana hay existencias reales hoy, y 3) Reserva su dosis obteniendo un <strong>Turno Digital Express con código QR</strong> y confirmación automática por WhatsApp.</em>
+            </p>
+            <p style="margin-top: 8px;">
+              <em>Además, con el principio <strong>'Optimizar y automatizar'</strong>, si un medicamento se agota, el sistema activa alertas tempranas de reabastecimiento en bodega y notifica automáticamente al celular del usuario cuando el lote ingresa al dispensario. Esta plataforma es completamente funcional y está desplegada en producción sobre GitHub Pages y microservicios Cloud."</em>
+            </p>
+          </div>
+
+          <div class="speech-tips">
+            <div><strong>📽️ Diapositiva:</strong> Compartir pantalla mostrando la Pestaña 4 (Prototipo Interactivo en 3 clics y tique QR).</div>
+            <div><strong>💡 Consejo de Oratoria:</strong> Tono fluido, interactuando en vivo con la web para cautivar a la audiencia.</div>
+          </div>
+        </div>
+
+        <!-- Integrante 3 -->
+        <div class="pitch-speaker-card" style="border-left: 5px solid var(--accent-green); margin-bottom: 16px;">
+          <div class="pitch-speaker-header">
+            <div class="speaker-meta">
+              <div class="speaker-badge-num">3</div>
+              <div class="speaker-name-role">
+                <h4>INTEGRANTE 3: SLAs, Indicadores KPIs, Retorno de Inversión y Cierre</h4>
+                <span>Rol: Director de Calidad, SRE y Gobierno de Proyectos TIC | ⏱️ Tiempo: 1 minuto y 30 segundos (03:00 - 04:30)</span>
+              </div>
+            </div>
+            <span class="badge badge-success">Fase 3: SLAs, ROI & Cierre</span>
+          </div>
+
+          <div class="speech-box">
+            <p>
+              <em>"Para garantizar que este servicio opere con calidad empresarial 24/7, establecimos <strong>Acuerdos de Nivel de Servicio (SLAs) rigurosos</strong>: una disponibilidad de plataforma garantizada del <strong>99.9%</strong> con tolerancia a fallas multizona, tiempos de respuesta de consulta menores a 1.5 segundos y un RTO de contingencia menor a 15 minutos.</em>
+            </p>
+            <p style="margin-top: 8px;">
+              <em>Los resultados de nuestros Indicadores Clave de Gestión (KPIs) en la fase piloto son contundentes:</em>
+              <br>• <em><strong>Redujimos las filas presenciales en un 64.2%</strong>, superando la meta del 60% exigida por el negocio.</em>
+              <br>• <em>Alcanzamos una <strong>exactitud de inventario del 98.6%</strong> entre el dato digital y las existencias físicas en bodega.</em>
+              <br>• <em>Y elevamos la satisfacción del paciente (CSAT) del 38% al <strong>91.4%</strong>.</em>
+            </p>
+            <p style="margin-top: 8px;">
+              <em>Señores de la Junta: Este proyecto no es un gasto, es una <strong>inversión de alto impacto con un ROI tangible</strong>: por cada peso invertido en la nube, la EPS se ahorra más de \$3.5 pesos en costos de atención presencial, multas de la Superintendencia y complicaciones de pacientes que antes abandonaban su terapia. Tenemos el diagnóstico holístico, la tecnología probada y el gobierno de ITIL 4 listo para su despliegue nacional. Los invitamos a aprobar su financiamiento. ¡Muchas gracias!"</em>
+            </p>
+          </div>
+
+          <div class="speech-tips">
+            <div><strong>📽️ Diapositiva:</strong> Gráficas de KPIs de la Pestaña 3 y cuadro de Retorno de Inversión (350% ROI).</div>
+            <div><strong>💡 Consejo de Oratoria:</strong> Cierre firme, convincente y con llamado claro a la acción ejecutiva.</div>
+          </div>
+        </div>
+
+        <div style="text-align: right; margin-top: 16px;">
+          <button class="btn btn-outline" onclick="closePitchModal()">Cerrar Ventana</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de Página Limpio -->
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-text">
         <h5>Transformación Digital del Servicio de Medicamentos • Nueva EPS</h5>
         <p>Proyecto de Formulación y Evaluación de Proyectos TIC | Ingeniería de Sistemas y Computación</p>
-        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 4px;">
-          Desarrollado bajo el marco ITIL 4, HTML5/CSS3 moderno y desplegado en <strong>GitHub Pages</strong>.
-        </p>
-      </div>
-
-      <div>
-        <span class="badge badge-success" style="font-size: 0.85rem;">Despliegue en GitHub Pages Activo</span>
       </div>
     </div>
   </footer>
