@@ -195,7 +195,7 @@ const MEDICINES_CATALOG = [
 
 // Estado global de la aplicación
 const AppState = {
-  activeTab: 'patient-portal',
+  activeTab: 'fase1',
   currentStep: 1,
   currentPatient: null,
   selectedMedicineId: 'losartan-50',
@@ -244,8 +244,8 @@ function switchTab(tabId) {
     panel.classList.toggle('active', panel.id === `tab-${tabId}`);
   });
 
-  // Si entra al dashboard, refrescar gráficos
-  if (tabId === 'management-dashboard') {
+  // Si entra a la Fase 3 (SLAs y KPIs), refrescar gráficos
+  if (tabId === 'fase3' || tabId === 'management-dashboard') {
     renderKpiCharts();
   }
 

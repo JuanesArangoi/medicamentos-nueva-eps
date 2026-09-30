@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nueva EPS - Consulta de Medicamentos en Tiempo Real | ITIL 4</title>
-  <meta name="description" content="Servicio digital de consulta y reserva de medicamentos en tiempo real para Nueva EPS con arquitectura ITIL 4, dashboards de control y mitigación de filas.">
+  <title>Nueva EPS - Transformación Digital del Servicio de Medicamentos | ITIL 4</title>
+  <meta name="description" content="Parcial 1 de Formulación y Evaluación de Proyectos TIC: Aplicación Práctica de ITIL 4 en Nueva EPS. Diagnóstico holístico, principios guía, SLAs/KPIs, pitch y prototipo interactivo.">
   <link rel="stylesheet" href="style.css">
-  <!-- Favicon SVG con temática de salud -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23004884'/><path d='M50 20 v60 M20 50 h60' stroke='white' stroke-width='14' stroke-linecap='round'/></svg>">
 </head>
 <body>
 
-  <!-- Barra de Encabezado Superior Institucional -->
+  <!-- Barra Superior Institucional -->
   <div class="top-bar">
     <div>
       <span>🇨🇴 República de Colombia | Sistema General de Seguridad Social en Salud (SGSSS)</span>
@@ -26,11 +25,11 @@
   <!-- Header Principal con Marca Nueva EPS -->
   <header class="main-header">
     <div class="header-container">
-      <a href="#" class="brand-wrapper" onclick="switchTab('patient-portal'); return false;">
+      <a href="#" class="brand-wrapper" onclick="switchTab('fase1'); return false;">
         <div class="brand-logo-badge">➕</div>
         <div class="brand-info">
-          <h1>NUEVA EPS | Medicamentos en Línea</h1>
-          <span>Arquitectura ITIL 4 • Red de Farmacias Aliadas en Tiempo Real</span>
+          <h1>NUEVA EPS | Transformación Digital de Medicamentos</h1>
+          <span>Formulación y Evaluación de Proyectos TIC • Aplicación Práctica de ITIL 4</span>
         </div>
       </a>
 
@@ -39,47 +38,42 @@
           <span>👓 Modo Adulto Mayor / Accesible</span>
         </button>
         <button onclick="printAcademicReport()" class="btn btn-primary btn-sm">
-          <span>📄 Exportar Informe Técnico</span>
+          <span>📄 Exportar Informe Técnico (PDF)</span>
         </button>
       </div>
     </div>
 
-    <!-- Navegación por Pestañas del Sistema -->
+    <!-- Navegación por Pestañas Estructurada Académicamente -->
     <nav class="nav-tabs-wrapper">
       <ul class="nav-tabs" role="tablist">
         <li>
-          <button class="tab-btn active" data-tab="patient-portal">
-            <span>🏥 1. Portal del Paciente (Prototipo 3 Clics)</span>
+          <button class="tab-btn active" data-tab="fase1">
+            <span>🏛️ 1. FASE 1: Diagnóstico y Diseño Holístico (4 Dimensiones)</span>
           </button>
         </li>
         <li>
-          <button class="tab-btn" data-tab="management-dashboard">
-            <span>📊 2. Dashboard SLAs & KPIs en Vivo</span>
+          <button class="tab-btn" data-tab="fase2">
+            <span>⚖️ 2. FASE 2: Despliegue de los 7 Principios Guía</span>
           </button>
         </li>
         <li>
-          <button class="tab-btn" data-tab="value-stream">
-            <span>🔄 3. Flujo de Valor (Value Stream)</span>
+          <button class="tab-btn" data-tab="fase3">
+            <span>📊 3. FASE 3: SLAs e Indicadores (KPIs)</span>
           </button>
         </li>
         <li>
-          <button class="tab-btn" data-tab="technical-report">
-            <span>📑 4. Informe Técnico (Fases 1, 2 y 3)</span>
+          <button class="tab-btn" data-tab="pitch">
+            <span>🎤 4. Pitch de Sustentación (3 Integrantes)</span>
           </button>
         </li>
         <li>
-          <button class="tab-btn" data-tab="itil-matrix">
-            <span>⚖️ 5. Matriz 7 Principios ITIL</span>
+          <button class="tab-btn" data-tab="bibliografia">
+            <span>📚 5. Bibliografía & Benchmark de Proyectos</span>
           </button>
         </li>
         <li>
-          <button class="tab-btn" data-tab="pitch-sustentacion">
-            <span>🎤 6. Pitch para 3 Integrantes</span>
-          </button>
-        </li>
-        <li>
-          <button class="tab-btn" data-tab="bibliography">
-            <span>📚 7. Bibliografía & Evidencias</span>
+          <button class="tab-btn" data-tab="prototipo">
+            <span>📱 6. Prototipo Interactivo (Portal en 3 Clics)</span>
           </button>
         </li>
       </ul>
@@ -90,162 +84,558 @@
   <main class="main-content">
 
     <!-- =========================================================================
-         PESTAÑA 1: PORTAL DEL PACIENTE (PROTOTIPO INTERACTIVO DE 3 CLICS)
+         PESTAÑA 1: FASE 1 - DIAGNÓSTICO Y DISEÑO HOLÍSTICO (LAS 4 DIMENSIONES DE ITIL 4)
          ========================================================================= -->
-    <div id="tab-patient-portal" class="tab-panel active">
+    <div id="tab-fase1" class="tab-panel active">
       
-      <!-- Banner Informativo -->
       <div class="alert-banner">
         <div class="alert-banner-content">
-          <h3>🚀 Transformación del Servicio de Dispensación de Medicamentos</h3>
+          <h3>🏛️ FASE 1: Diagnóstico y Diseño Holístico (Las 4 Dimensiones de ITIL 4)</h3>
           <p>
-            Consulta en tiempo real el inventario de tu fórmula médica en la red de farmacias aliadas (Audifarma, Cafam, Cruz Verde), 
-            reserva tu turno express y reduce tu tiempo de espera presencial de <strong>3.5 horas a menos de 10 minutos</strong>.
+            Para garantizar el éxito de la transformación digital del servicio de dispensación en Nueva EPS y evitar fallas operativas o rechazo cultural, 
+            la solución se formula abordando de manera articulada las <strong>Cuatro Dimensiones de la Gestión del Servicio de ITIL 4</strong>.
           </p>
         </div>
         <div>
-          <span class="badge badge-info">Principio ITIL: Mantenerlo Simple y Práctico</span>
+          <span class="badge badge-primary">Rúbrica Oficial - Fase 1</span>
         </div>
       </div>
 
-      <!-- Indicador de los 3 Clics Guiados -->
-      <div class="steps-indicator">
-        <div class="step-item active" data-step="1">
-          <div class="step-circle">1</div>
-          <span class="step-label">Identificación & Fórmula</span>
+      <!-- Dimensión 1: Organizaciones y Personas -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">👥 1. Dimensión: Organizaciones y Personas</h3>
+            <p class="card-subtitle">Estructura humana, asignación de responsabilidades y plan de gestión del cambio para erradicar la resistencia operativa.</p>
+          </div>
+          <span class="badge badge-info">Gobernanza RACI</span>
         </div>
-        <div class="step-item" data-step="2">
-          <div class="step-circle">2</div>
-          <span class="step-label">Consulta de Stock en Sedes</span>
+
+        <h4 style="color: var(--primary); margin-bottom: 8px;">A. Definición de Roles Necesarios</h4>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Rol del Servicio</th>
+                <th>Área / Actor</th>
+                <th>Responsabilidades Clave en el Servicio</th>
+                <th>Matriz RACI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Equipo de Desarrollo (Dev Team)</strong></td>
+                <td>Célula Ágil Nueva EPS (Product Owner, Scrum Master, Arquitecto Cloud, Desarrolladores Fullstack, Ingeniero de Datos)</td>
+                <td>Desarrollo iterativo de la app web responsive y PWA, construcción del API Gateway seguro, conectores de integración HL7 FHIR con farmacias aliadas y pruebas automatizadas de carga.</td>
+                <td><span class="badge badge-primary">Responsible (R)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Soporte Técnico 24/7 (SRE / DevOps)</strong></td>
+                <td>Gerencia TIC Nueva EPS + Centro de Operaciones de Red (NOC/SOC)</td>
+                <td>Monitoreo continuo de la disponibilidad de la plataforma (SLA 99.9%), observabilidad de latencia (< 2s), atención de incidentes críticos P1/P2 y gestión de respaldos y failover multizona.</td>
+                <td><span class="badge badge-primary">Responsible (R) / Accountable (A)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Administradores y Regentes de Farmacia</strong></td>
+                <td>Operadores Farmacéuticos Aliados (Audifarma S.A., Droguerías Cafam, Cruz Verde)</td>
+                <td>Operación de la ventanilla preferencial física "Turno Digital Express", escaneo de códigos QR, entrega rápida de fórmulas, conteos cíclicos de inventario y pistoleo óptico al dispensar.</td>
+                <td><span class="badge badge-warning">Responsible (R) / Consulted (C)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Usuarios Pacientes y Cuidadores</strong></td>
+                <td>Afiliados a Nueva EPS (Régimen Contributivo y Subsidiado, priorizando pacientes crónicos y adultos mayores)</td>
+                <td>Consulta en 3 clics de la disponibilidad de su fórmula médica, reserva de turnos digitales express, recepción de notificaciones vía WhatsApp y evaluación de la satisfacción del servicio.</td>
+                <td><span class="badge badge-success">Informed (I) / Usuario Final</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="step-item" data-step="3">
-          <div class="step-circle">3</div>
-          <span class="step-label">Turno Digital & Notificación</span>
+
+        <h4 style="color: var(--primary); margin: 20px 0 8px;">B. Plan de Gestión del Cambio Organizacional (Marco Prosci ADKAR & Kotter)</h4>
+        <p style="font-size: 0.9rem; margin-bottom: 12px;">
+          El personal operativo de farmacias (dispensadores y regentes) lleva años acostumbrado a procesos manuales, sellos de papel y lidiar con pacientes frustrados. 
+          Para evitar que el personal sabotee la ventanilla express o se niegue a usar el escáner digital, se implementa una estrategia basada en <strong>ADKAR</strong>:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+          <div style="background: var(--bg-subtle); border-left: 4px solid var(--primary); padding: 14px; border-radius: var(--radius-sm);">
+            <strong style="color: var(--primary);">1. Awareness (Conciencia)</strong>
+            <p style="font-size: 0.84rem; margin-top: 4px; color: var(--text-main);">
+              Sensibilizar mediante reuniones de equipo sobre cómo el modelo manual actual causa el 85% de las agresiones verbales hacia el regente por desabastecimiento. La digitalización protege su bienestar laboral.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); border-left: 4px solid var(--secondary); padding: 14px; border-radius: var(--radius-sm);">
+            <strong style="color: var(--secondary);">2. Desire (Deseo)</strong>
+            <p style="font-size: 0.84rem; margin-top: 4px; color: var(--text-main);">
+              Demostrar que con el turno digital la demanda se nivela a lo largo del día. Se eliminan las aglomeraciones caóticas de las 7:00 a. m. y el operario trabaja con un ritmo ordenado y previsible.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); border-left: 4px solid var(--accent-amber); padding: 14px; border-radius: var(--radius-sm);">
+            <strong style="color: var(--accent-amber);">3. Knowledge (Conocimiento)</strong>
+            <p style="font-size: 0.84rem; margin-top: 4px; color: var(--text-main);">
+              Capacitación mediante micro-cápsulas de video de 3 minutos en teléfonos corporativos y guías visuales sobre cómo usar la pistola lectora de QR y gestionar excepciones en el sistema.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); border-left: 4px solid #6366f1; padding: 14px; border-radius: var(--radius-sm);">
+            <strong style="color: #6366f1;">4. Ability (Habilidad)</strong>
+            <p style="font-size: 0.84rem; margin-top: 4px; color: var(--text-main);">
+              Simulacros en vivo en 10 sedes piloto con "pacientes simulados" antes de abrir al público real, asegurando que el tiempo de despacho baje a menos de 3 minutos por usuario.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); border-left: 4px solid var(--accent-green); padding: 14px; border-radius: var(--radius-sm);">
+            <strong style="color: var(--accent-green);">5. Reinforcement (Refuerzo)</strong>
+            <p style="font-size: 0.84rem; margin-top: 4px; color: var(--text-main);">
+              Programa de incentivos *"Dispensario Cinco Estrellas"*: bonificación mensual al personal de las sedes con mayor fidelidad de inventario y menores tiempos de atención al usuario.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="search-grid">
-        <!-- Columna Izquierda: Formulario de Consulta Rápida -->
-        <div>
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">🔍 Clic 1: Consulta de Afiliado y Fórmulas</h3>
-                <p class="card-subtitle">Ingresa tu documento para cargar tus prescripciones MIPRES autorizadas.</p>
-              </div>
-              <span class="badge badge-primary">Autenticación Segura</span>
-            </div>
+      <!-- Dimensión 2: Información y Tecnología -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">💻 2. Dimensión: Información y Tecnología</h3>
+            <p class="card-subtitle">Arquitectura desacoplada, interoperabilidad en salud (HL7 FHIR) y seguridad estricta de datos médicos.</p>
+          </div>
+          <span class="badge badge-success">Arquitectura Cloud</span>
+        </div>
 
-            <div class="form-group">
-              <label class="form-label" for="input-doc">Número de Documento de Identidad (C.C. / T.I. / C.E.):</label>
-              <div style="display: flex; gap: 8px;">
-                <input type="text" id="input-doc" class="form-input" placeholder="Ej: 1020304050" value="1020304050">
-                <button id="btn-search-stock" class="btn btn-primary">
-                  <span>Consultar</span>
-                </button>
-              </div>
-            </div>
+        <h4 style="color: var(--primary); margin-bottom: 8px;">A. Arquitectura del Servicio (Event-Driven & Microservicios Cloud)</h4>
+        <p style="font-size: 0.9rem; margin-bottom: 12px;">
+          Para soportar millones de consultas simultáneas sin degradar los servidores de las farmacias aliadas, se adopta una arquitectura orientada a eventos en la nube:
+        </p>
 
-            <!-- Botones de Demostración Inmediata -->
-            <div style="margin-top: 10px;">
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Probar casos reales pre-cargados con 1 clic:</span>
-              <div class="quick-demo-buttons">
-                <button class="quick-demo-btn" onclick="loadSamplePrescription('1020304050')">
-                  👤 Juan Morales (Hipertensión / Losartán)
-                </button>
-                <button class="quick-demo-btn" onclick="loadSamplePrescription('52418933')">
-                  👵 Gladys Gómez (Adulto Mayor / Metformina e Insulina)
-                </button>
-                <button class="quick-demo-btn" onclick="loadSamplePrescription('1098765432')">
-                  🧑 Andrés Cardona (Asma / Salbutamol)
-                </button>
-              </div>
-            </div>
+        <ul style="margin: 0 0 16px 24px; font-size: 0.9rem; line-height: 1.7;">
+          <li><strong>Canal Web y Móvil (Frontend Omnicanal):</strong> Single Page Application (SPA) / Progressive Web App (PWA) de carga ultra-rápida (&lt; 1 segundo), adaptada para redes móviles 3G/4G, y canal alternativo de WhatsApp Business Cloud API para máxima accesibilidad.</li>
+          <li><strong>Capa de Seguridad & API Gateway:</strong> Amazon API Gateway con autenticación OAuth 2.0 y JWT, limitador de tasa (Rate Limiting de 5,000 req/s) y Web Application Firewall (AWS WAF) para mitigación de ataques DDoS y OWASP Top 10.</li>
+          <li><strong>APIs de Integración REST / GraphQL con Inventarios:</strong> Conectores middleware que consumen los inventarios de Audifarma, Cafam y Cruz Verde mediante Webhooks bidireccionales y Change Data Capture (CDC), estandarizando los datos bajo el protocolo internacional <strong>HL7 FHIR Release 5</strong> (`MedicationRequest` y `MedicationDispense`).</li>
+          <li><strong>Capa de Datos Cloud Híbrida de Alta Disponibilidad:</strong> 
+            Amazon Aurora PostgreSQL / DynamoDB para la persistencia transaccional de citas y recetas, y un clúster en memoria <strong>Redis ElastiCache</strong> que mantiene en caché los saldos de inventario con tiempos de respuesta <strong>menores a 15 milisegundos</strong>.
+          </li>
+        </ul>
 
-            <!-- Tarjeta de Fórmula Activa del Paciente -->
-            <div id="patient-prescription-card" style="margin-top: 18px; padding: 14px; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-              <!-- Contenido inyectado por app.js -->
-            </div>
+        <h4 style="color: var(--primary); margin: 20px 0 8px;">B. Medidas de Seguridad y Privacidad para la Información Médica</h4>
+        <p style="font-size: 0.9rem; margin-bottom: 10px;">
+          Bajo el ordenamiento jurídico colombiano, los datos de salud son de <strong>naturaleza sensible y reserva legal</strong>:
+        </p>
 
-            <!-- Filtros de Consulta -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
-              <div class="form-group">
-                <label class="form-label" for="select-city">Ciudad / Municipio:</label>
-                <select id="select-city" class="form-select">
-                  <option value="Bogota">Bogotá D.C.</option>
-                  <option value="Medellin">Medellín</option>
-                  <option value="Cali">Cali</option>
-                  <option value="Barranquilla">Barranquilla</option>
-                  <option value="all">Todas las Sedes del País</option>
-                </select>
-              </div>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Requisito de Seguridad</th>
+                <th>Marco Normativo</th>
+                <th>Implementación Técnica de Ingeniería</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Consentimiento y Habeas Data</strong></td>
+                <td>Ley Estatutaria 1581 de 2012 y Decreto 1377 de 2013</td>
+                <td>Aceptación explícita de tratamiento de datos al ingresar el documento; finalidades restringidas exclusivamente a la dispensación y farmacovigilancia.</td>
+              </tr>
+              <tr>
+                <td><strong>Confidencialidad de Diagnósticos</strong></td>
+                <td>Resolución 521 de 2020 y estándares HIPAA</td>
+                <td><strong>Enmascaramiento de diagnósticos (CIE-10):</strong> La interfaz web jamás expone la patología clínica del paciente. Solo muestra nombre del medicamento, posología y disponibilidad en farmacia.</td>
+              </tr>
+              <tr>
+                <td><strong>Cifrado Fuerte de Datos</strong></td>
+                <td>ISO/IEC 27001 y guías MinTIC</td>
+                <td>Cifrado en tránsito mediante <strong>TLS 1.3</strong> con certificados SSL de clase extendida; cifrado en reposo en bases de datos y backups con <strong>AES-256</strong> administrado por AWS KMS.</td>
+              </tr>
+              <tr>
+                <td><strong>Trazabilidad y Auditoría Forense</strong></td>
+                <td>Superintendencia Nacional de Salud</td>
+                <td>Registro inmutable de logs en Amazon CloudWatch / S3 Glacier con marca de tiempo, dirección IP y acción efectuada, garantizando el principio de no repudio.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-              <div class="form-group">
-                <label class="form-label" for="select-medicine">Medicamento Seleccionado:</label>
-                <select id="select-medicine" class="form-select">
-                  <option value="losartan-50">Losartán Potásico 50 mg</option>
-                  <option value="metformina-850">Metformina Clorhidrato 850 mg</option>
-                  <option value="insulina-glargina">Insulina Glargina 100 UI/ml</option>
-                  <option value="atorvastatina-20">Atorvastatina 20 mg</option>
-                  <option value="levotiroxina-50">Levotiroxina Sódica 50 mcg</option>
-                  <option value="acetaminofen-500">Acetaminofén 500 mg</option>
-                  <option value="omeprazol-20">Omeprazol 20 mg</option>
-                  <option value="salbutamol-100">Salbutamol Inhalador 100 mcg</option>
-                </select>
-              </div>
-            </div>
+      <!-- Dimensión 3: Socios y Proveedores -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">🤝 3. Dimensión: Socios y Proveedores</h3>
+            <p class="card-subtitle">Ecosistema externo de infraestructura, logística farmacéutica y definición del esquema de soporte técnico.</p>
+          </div>
+          <span class="badge badge-primary">SLA & OLAs</span>
+        </div>
 
+        <h4 style="color: var(--primary); margin-bottom: 8px;">A. Mapeo de Proveedores Externos Requeridos</h4>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Categoría de Proveedor</th>
+                <th>Proveedores Seleccionados</th>
+                <th>Función en el Servicio</th>
+                <th>Mecanismo Contractual / Acuerdo Operativo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Infraestructura Cloud</strong></td>
+                <td>Amazon Web Services (AWS) / Microsoft Azure</td>
+                <td>Hosting del API Gateway, bases de datos serverless, Redis y balanceadores de carga multizona (Multi-AZ).</td>
+                <td>SLA contractual del <strong>99.95% de disponibilidad</strong>, centros de datos con certificación ISO 27001 y SOC 2.</td>
+              </tr>
+              <tr>
+                <td><strong>Gestores Farmacéuticos Aliados</strong></td>
+                <td>Audifarma S.A., Droguerías Cafam, Cruz Verde Colombia</td>
+                <td>Logística física de bodegaje, transporte de medicamentos, atención en taquilla y sincronización de inventarios.</td>
+                <td>Acuerdos de Nivel Operacional (OLAs) con penalización por discrepancias de inventario mayores al 2%.</td>
+              </tr>
+              <tr>
+                <td><strong>Pasarelas de Mensajería Omnicanal</strong></td>
+                <td>Meta (WhatsApp Business Cloud API) y Twilio / Infobip</td>
+                <td>Envío masivo automatizado de confirmaciones de turno digital express y alertas push cuando llega stock.</td>
+                <td>Entrega de mensajes garantizada en <strong>menos de 30 segundos</strong> para el 99% de las transacciones.</td>
+              </tr>
+              <tr>
+                <td><strong>Operadores de Telecomunicaciones y CDN</strong></td>
+                <td>Cloudflare CDN y carriers telco colombianos (Claro, Tigo, Movistar)</td>
+                <td>Aceleración de contenido estático en el borde (Edge), protección anti-DDoS y redundancia en enlaces troncales.</td>
+                <td>Mitigación de ataques volumétricos en capa 7 y optimización de entrega de assets en redes móviles.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 style="color: var(--primary); margin: 20px 0 8px;">B. Definición del Esquema de Soporte Técnico: Híbrido Estratégico (Outsourcing vs. In-house)</h4>
+        <p style="font-size: 0.9rem; margin-bottom: 12px;">
+          Se descarta tanto el outsourcing total (riesgo de pérdida de gobernanza de salud) como el in-house total (costos desbordados de nómina 24/7). 
+          Se adopta un **modelo híbrido de tres niveles**:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+          <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--radius-md); border-top: 4px solid var(--secondary);">
+            <h5 style="color: var(--primary); font-size: 1rem;">Nivel 1 (L1) - Mesa de Ayuda 24/7: OUTSOURCING</h5>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+              Contratado con un BPO especializado en servicios de salud. Atención omnicanal de usuarios (preguntas frecuentes, desbloqueo de cuentas, triaje asistido por IA). 
+              <strong>Tiempo de respuesta: &lt; 3 minutos</strong>.
+            </p>
           </div>
 
-          <!-- Resultado del Clic 3: Turno Digital Generado -->
-          <div id="ticket-result-box" style="display: none; margin-bottom: 24px;">
-            <!-- Renderizado dinámico en app.js -->
+          <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--radius-md); border-top: 4px solid var(--primary);">
+            <h5 style="color: var(--primary); font-size: 1rem;">Nivel 2 (L2) - Soporte de Aplicaciones: IN-HOUSE</h5>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+              Ingenieros de sistemas propios de Nueva EPS. Resuelven inconsistencias de sincronización de APIs entre farmacias, fallas de comunicación con MIPRES/ADRES y ajustes de catálogos. 
+              <strong>Tiempo de resolución: &lt; 15 minutos</strong>.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--radius-md); border-top: 4px solid var(--accent-green);">
+            <h5 style="color: var(--primary); font-size: 1rem;">Nivel 3 (L3) - Infraestructura y Seguridad: IN-HOUSE + AWS</h5>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+              Arquitectos de nube y desarrolladores core de Nueva EPS respaldados por el plan de soporte Enterprise de AWS. Custodia del código fuente, seguridad, escalabilidad y respuesta ante desastres. 
+              <strong>Tiempo de respuesta: &lt; 10 minutos</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dimensión 4: Flujos de Valor y Procesos -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">🔄 4. Dimensión: Flujos de Valor y Procesos (Value Streams)</h3>
+            <p class="card-subtitle">Mapeo del ciclo de dispensación y erradicación sistemática de desperdicios Lean y cuellos de botella.</p>
+          </div>
+          <span class="badge badge-success">Reducción de 210 a 15 min</span>
+        </div>
+
+        <h4 style="color: var(--primary); margin-bottom: 8px;">A. Mapeo del Flujo de Valor: Proceso Tradicional (As-Is) vs. Proceso ITIL 4 (To-Be)</h4>
+        
+        <div class="vsm-comparison">
+          <!-- Flujo As-Is -->
+          <div class="vsm-column as-is">
+            <h5 style="color: var(--accent-red); font-size: 1.05rem; margin-bottom: 8px;">❌ Flujo Tradicional (As-Is: Manual y Fragmentado)</h5>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Duración promedio: <strong>210 minutos (3.5 horas)</strong>. Desconexión total entre el médico, la EPS y la droguería.</p>
+            
+            <div class="vsm-timeline">
+              <div class="vsm-step">
+                <div class="vsm-node value">1</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Médico prescribe fórmula:</strong> Genera orden impresa o digital desarticulada del inventario de farmacia. (10 min - Aporta valor clínico).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node waste">2</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Viaje a ciegas a farmacia asignada:</strong> El paciente gasta tiempo y dinero desplazándose sin saber si hay existencias. (45 min - Desperdicio).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node waste">3</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Fila física presencial:</strong> Espera de pie o sentado a la intemperie entre 120 y 180 minutos para ser atendido. (150 min - Cuello de botella crítico).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node waste">4</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Atención en ventanilla y quiebre de stock:</strong> El regente revisa y comunica: *"No hay Losartán, tiene que volver la otra semana"*. (Falla del servicio).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node waste">5</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Peregrinaje o queja SuperSalud:</strong> Desplazamiento a otra sede o radicación de PQR por vulneración del derecho a la salud.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flujo To-Be -->
+          <div class="vsm-column to-be">
+            <h5 style="color: var(--accent-green); font-size: 1.05rem; margin-bottom: 8px;">✅ Flujo Optimizado (To-Be: ITIL 4 & Digital)</h5>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Duración promedio: <strong>15 minutos</strong>. Flujo continuo guiado por eventos y confirmación previa en la nube.</p>
+            
+            <div class="vsm-timeline">
+              <div class="vsm-step">
+                <div class="vsm-node value">1</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Fórmula Electrónica Integrada:</strong> El médico prescribe en Historia Clínica; el sistema emite evento a la plataforma Cloud y precarga la fórmula. (Inmediato).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node value">2</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Consulta en 3 Clics desde Móvil/Web:</strong> El paciente ingresa su cédula, visualiza farmacias con stock en verde y selecciona la más cercana. (&lt; 2 min).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node value">3</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Reserva de Turno Express con QR:</strong> El sistema bloquea el stock por 4 horas y asigna una ventana preferencial de 15 min, enviando confirmación a WhatsApp.
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node value">4</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Llegada al Dispensario sin Filas:</strong> El usuario acude directamente al módulo preferencial *"Turno Express"* y escanea su código QR. (Espera &lt; 5 min).
+                </div>
+              </div>
+              <div class="vsm-step">
+                <div class="vsm-node value">5</div>
+                <div class="vsm-desc">
+                  <strong style="font-size: 0.9rem;">Dispensación Rápida y Actualización Cloud:</strong> El regente entrega el paquete ya alistado (pre-picking), pistolea el lote y el stock se descuenta en 10 ms. (Valor pleno).
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Columna Derecha: Red de Farmacias con Stock en Tiempo Real & Simulador WhatsApp -->
-        <div>
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">📍 Clic 2: Disponibilidad en Farmacias Aliadas</h3>
-                <p class="card-subtitle">Inventario centralizado y sincronizado mediante Middleware Cloud.</p>
-              </div>
-              <span class="badge badge-success">● Datos en Vivo</span>
-            </div>
+        <h4 style="color: var(--primary); margin: 20px 0 8px;">B. Identificación y Eliminación de Actividades sin Valor Añadido (Desperdicios Lean)</h4>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Desperdicio Identificado (Muda)</th>
+                <th>Causa Raíz en el Proceso Tradicional</th>
+                <th>Contramedida de Ingeniería ITIL 4 Implementada</th>
+                <th>Impacto Medible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Espera (Waiting)</strong></td>
+                <td>Llegada desordenada de cientos de usuarios simultáneos en las mañanas sin cita previa.</td>
+                <td>Turno Digital Express con reserva horaria balanceada y asignación dinámica de carga.</td>
+                <td>Reducción del tiempo de espera de 150 min a menos de 8 min.</td>
+              </tr>
+              <tr>
+                <td><strong>Transporte Inútil (Transport)</strong></td>
+                <td>Pacientes obligados a viajar físicamente para averiguar si una sede tiene medicamentos.</td>
+                <td>Geolocalización en tiempo real de inventarios en la app y domicilio para mayores de 70 años.</td>
+                <td>Eliminación del 100% de los desplazamientos a ciegas sin existencias.</td>
+              </tr>
+              <tr>
+                <td><strong>Defectos y Reprocesos</strong></td>
+                <td>Transcripción errónea de fórmulas en ventanilla física y discrepancias entre sistemas.</td>
+                <td>Interoperabilidad directa con MIPRES y validación óptica de códigos de barras.</td>
+                <td>Disminución a cero de errores de digitación; exactitud de inventario al 98.6%.</td>
+              </tr>
+              <tr>
+                <td><strong>Talento Subutilizado</strong></td>
+                <td>Regentes farmacéuticos dedicados a calmar peleas por desabastecimiento en vez de asesorar.</td>
+                <td>Filtrado digital del flujo; el personal se enfoca en dispensación ágil y farmacovigilancia.</td>
+                <td>Aumento del 40% en la productividad y mejora del clima laboral.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-            <!-- Listado de Farmacias con Stock -->
-            <div id="pharmacies-container" class="pharmacy-list">
-              <!-- Inyectado dinámicamente por JavaScript -->
-            </div>
+
+    <!-- =========================================================================
+         PESTAÑA 2: FASE 2 - DESPLIEGUE DE LOS 7 PRINCIPIOS GUÍA DE ITIL 4
+         ========================================================================= -->
+    <div id="tab-fase2" class="tab-panel">
+      
+      <div class="alert-banner">
+        <div class="alert-banner-content">
+          <h3>⚖️ FASE 2: Despliegue de los 7 Principios Guía de ITIL 4</h3>
+          <p>
+            Justificación técnica y matriz de decisiones de ingeniería que sustenta cómo se aplicó cada uno de los 7 Principios Guía de ITIL 4 
+            para resolver los desafíos de negocio de Nueva EPS, explicando el <strong>porqué de cada decisión y su impacto medible</strong>.
+          </p>
+        </div>
+        <div>
+          <span class="badge badge-primary">Rúbrica Oficial - Fase 2</span>
+        </div>
+      </div>
+
+      <!-- Matriz Resumen de los 7 Principios Guía -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">📋 Matriz de Decisiones: Principio ITIL ➔ Decisión Tecnológica ➔ Justificación e Impacto</h3>
+          <span class="badge badge-success">Cuadro Comparativo Completo</span>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th style="width: 17%;">Principio ITIL 4</th>
+                <th style="width: 25%;">Decisión Tecnológica en el Caso</th>
+                <th style="width: 32%;">Justificación Técnica (¿Por qué?)</th>
+                <th style="width: 26%;">Impacto Medible en Nueva EPS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Focus on Value<br>(Enfoque en el valor)</strong></td>
+                <td>Módulo físico y digital de <strong>"Turno Express con QR"</strong> articulado a la consulta de stock en tiempo real.</td>
+                <td>El valor en salud no es la cantidad de líneas de código, sino el tiempo de vida y la tranquilidad del afiliado. Evitar filas interminables garantiza adherencia terapéutica y protege a la EPS de sanciones millonarias de la SuperSalud.</td>
+                <td><strong>Ahorro de 3.2 horas</strong> por trámite para el paciente. <strong>Reducción del 72%</strong> en multas y quejas ante la SuperSalud.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Start Where You Are<br>(Empezar donde se está)</strong></td>
+                <td><strong>Middleware de Integración mediante Webhooks y APIs REST/GraphQL</strong> sobre los ERPs existentes de Audifarma, Cafam y Cruz Verde.</td>
+                <td>Descartar los sistemas de inventario de las cadenas farmacéuticas costaría decenas de millones de dólares y años de litigios. Se aprovechan sus bases de datos legadas y la base de datos de afiliados de Nueva EPS y MIPRES.</td>
+                <td><strong>Ahorro del 85% en inversión tecnológica (CapEx)</strong>. Puesta en producción del servicio en menos de 90 días calendario.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Progress Iteratively with Feedback<br>(Progresar iterativamente con retroalimentación)</strong></td>
+                <td>Despliegue del <strong>MVP v1.0 en 50 medicamentos crónicos de alta rotación en 20 dispensarios</strong> de Bogotá y Medellín, con encuesta de 1 toque post-dispensación.</td>
+                <td>Los despliegues masivos tipo "Big Bang" en salud pública suelen colapsar por desajustes imprevistos. Un MVP controlado permite calibrar la sincronización de inventario y afinar la experiencia de usuario con datos reales.</td>
+                <td>Detección y corrección temprana de 14 fricciones logísticas en bodega; <strong>CSAT inicial del 91.4%</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Collaborate and Promote Visibility<br>(Colaborar y promover visibilidad)</strong></td>
+                <td><strong>Dashboard Ejecutivo Centralizado</strong> para gerencias y <strong>Semáforo de Disponibilidad Público</strong> (Verde, Amarillo, Rojo) para pacientes.</td>
+                <td>La opacidad en la información genera aglomeraciones por pánico, filas a ciegas y desconfianza. Cuando directivos, farmacéuticos y pacientes ven el mismo dato en tiempo real, se erradica la incertidumbre.</td>
+                <td><strong>Disminución del 55%</strong> de llamadas telefónicas a la línea de atención. Aplanamiento de horas pico en un 48%.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Think and Work Holistically<br>(Pensar y trabajar holísticamente)</strong></td>
+                <td>Articulación entre el <strong>agendamiento digital, la capacidad física de ventanillas y el pre-empaquetado (pre-picking)</strong> en bodega física.</td>
+                <td>El mejor software es inútil si al llegar al punto físico no hay ventanilla asignada o el regente no tiene el paquete preparado. Se reconfiguró el espacio físico de las sedes aliadas para garantizar un flujo continuo.</td>
+                <td><strong>Aumento del 40% en capacidad operativa de atención</strong> sin necesidad de contratar más personal físico.</td>
+              </tr>
+              <tr>
+                <td><strong>6. Keep It Simple and Practical<br>(Mantenerlo simple y práctico)</strong></td>
+                <td>Diseño con <strong>Regla estricta de 3 Clics</strong>, modo accesible para Adultos Mayores (WCAG 2.1 AA) y canal de WhatsApp para personas sin computador.</td>
+                <td>Más del 45% de los pacientes crónicos son adultos mayores o usuarios con bajo dominio tecnológico. Una interfaz compleja con registros eternos causaría el fracaso y abandono de la plataforma.</td>
+                <td><strong>Tasa de adopción digital del 71.8%</strong>, superando ampliamente la meta proyectada del 65% en los primeros 6 meses.</td>
+              </tr>
+              <tr>
+                <td><strong>7. Optimize and Automate<br>(Optimizar y automatizar)</strong></td>
+                <td><strong>Triggers automáticos de reabastecimiento en la nube</strong> (stock &lt; 15%) y <strong>notificaciones automáticas vía WhatsApp</strong> cuando arriba nuevo lote.</td>
+                <td>Las tareas repetitivas deben delegarse a la nube para liberar a las personas hacia labores clínicas. Evita que una sede quede desabastecida por olvidos humanos de reordenar inventario.</td>
+                <td><strong>Eliminación del 88% de quiebres imprevistos de stock</strong> y exactitud de inventario consolidado del <strong>98.6%</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Desarrollo Profundo de los 7 Principios con Respuestas a los Interrogantes -->
+      <div class="card">
+        <h3 class="card-title">📖 Justificación Detallada y Análisis de Ingeniería por Principio</h3>
+        <p class="card-subtitle" style="margin-bottom: 16px;">Explicación profunda de los 7 interrogantes planteados en la guía académica del examen.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <!-- 1. Focus on Value -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--primary);">1. Focus on Value: ¿Cómo genera valor tangible para el paciente y para la EPS?</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              <strong>Para el Paciente:</strong> El valor tangible es la <strong>recuperación de su tiempo y dignidad</strong>. Pasar de 3.5 horas de fila a 10 minutos significa menos ausentismo laboral, menores costos de transporte y certidumbre absoluta de que al viajar a la sede recibirá su medicina, garantizando la adherencia a sus tratamientos crónicos.
+            </p>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              <strong>Para la Nueva EPS:</strong> El valor tangible se traduce en <strong>ahorro financiero directo y protección de marca</strong>. Se reducen en un 72% las quejas ante la SuperSalud (que acarrean multas de hasta 1,000 SMMLV), disminuyen los costos logísticos de atención presencial, se optimizan las compras a proveedores y se evitan costosas hospitalizaciones de urgencia por descompensaciones de pacientes que antes suspendían su medicación.
+            </p>
           </div>
 
-          <!-- Simulador de Notificaciones Omnicanal WhatsApp / SMS -->
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">📲 Canal Proactivo WhatsApp Business Cloud</h3>
-                <p class="card-subtitle">Confirmación instantánea de turno y alertas de arribo de stock (Principio 7: Automatización).</p>
-              </div>
-              <span class="badge badge-info">API Meta Cloud</span>
-            </div>
+          <!-- 2. Start Where You Are -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--secondary);">
+            <h4 style="color: var(--secondary);">2. Start Where You Are: ¿Qué software e infraestructura existente se reutilizan?</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              En lugar de construir un ERP de farmacia nuevo, la solución se acopla a lo que ya funciona:
+              <br>• <strong>Sistemas POS y WMS de proveedores:</strong> Se reutilizan los sistemas SAP (Audifarma), SysMan (Cafam) y los sistemas de código de barras existentes mediante conectores API livianos con autenticación segura.
+              <br>• <strong>Bases de datos de Nueva EPS:</strong> Se aprovecha el repositorio central de usuarios afiliados y derechos de aseguramiento (conectado a la BDUA de ADRES).
+              <br>• <strong>Plataforma MIPRES:</strong> Se reutiliza la API de prescripciones del Ministerio de Salud, evitando duplicar registros de fórmulas.
+            </p>
+          </div>
 
-            <div class="chat-simulator-card">
-              <div class="chat-sim-header">
-                <div class="chat-sim-avatar">NE</div>
-                <div>
-                  <h4 style="font-size: 0.95rem; margin: 0; line-height: 1.2;">Nueva EPS - Farmacia Oficial</h4>
-                  <span style="font-size: 0.72rem; color: #dcfce7;">● Cuenta Verificada Oficial</span>
-                </div>
-              </div>
-              <div id="chat-simulator-messages" class="chat-sim-body">
-                <div class="chat-bubble">
-                  <strong>Hola Juan Esteban, bienvenido al canal de dispensación Nueva EPS.</strong>
-                  <p style="margin-top: 4px;">Al reservar tu turno digital aquí o en el portal web, recibirás tu código de acceso con la hora recomendada para evitar colas.</p>
-                  <span class="time">10:00 a. m. ✓✓</span>
-                </div>
-              </div>
-            </div>
+          <!-- 3. Progress Iteratively with Feedback -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-amber);">
+            <h4 style="color: var(--accent-amber);">3. Progress Iteratively with Feedback: Definición del MVP v1.0 y retroalimentación</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              <strong>Alcance del MVP 1.0:</strong> Se acotó a los 50 medicamentos crónicos de mayor rotación (Losartán, Metformina, Insulina Glargina, Atorvastatina, etc.) en 20 dispensarios piloto de Bogotá y Medellín, cubriendo el 60% de la demanda crítica.
+              <br><strong>Bucle de Retroalimentación:</strong> Micro-encuesta instantánea al momento de retirar el fármaco con 1 clic ("¿Cómo califica su entrega hoy?"), botón de reporte de inconsistencia de stock y telemetría automática de latencia y errores en CloudWatch.
+            </p>
+          </div>
+
+          <!-- 4. Collaborate and Promote Visibility -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid #6366f1;">
+            <h4 style="color: #6366f1);">4. Collaborate and Promote Visibility: Dashboards en tiempo real para directivos y usuarios</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              <strong>Para Directivos y Gerentes de Farmacia:</strong> Un Tablero de Control Ejecutivo con métricas de afluencia por hora, quiebres de inventario previstos para las próximas 24 horas y cumplimiento de SLAs por proveedor.
+              <br><strong>Para Usuarios y Pacientes:</strong> Un semáforo visual transparente en la web y WhatsApp: 🟢 Disponible (>20 unidades), 🟡 Pocas unidades (<10 unidades) y 🔴 Agotado con fecha y hora estimada de la próxima llegada de lote.
+            </p>
+          </div>
+
+          <!-- 5. Think and Work Holistically -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-green);">
+            <h4 style="color: var(--accent-green);">5. Think and Work Holistically: Articulación con la capacidad física en dispensarios</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              La solución integra el mundo de bits con el mundo físico:
+              <br>• El algoritmo de reservas no permite que más de 10 usuarios reserven en una misma franja de 15 minutos por taquilla habilitada, previniendo saturación física.
+              <br>• En cada dispensario se señalizó la ventanilla preferencial <strong>"Turno Digital Express"</strong>.
+              <br>• El sistema envía la orden a la bodega física 30 minutos antes para que el regente realice el picking y empaque previo, entregando la medicina en menos de 2 minutos tras escanear el QR.
+            </p>
+          </div>
+
+          <!-- 6. Keep It Simple and Practical -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid #0284c7;">
+            <h4 style="color: #0284c7);">6. Keep It Simple and Practical: Interfaz en 3 clics orientada a adultos mayores</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              Diseño accesible bajo el estándar WCAG 2.1 Nivel AA:
+              <br>• <strong>Clic 1:</strong> Ingresar número de cédula (se carga la fórmula sin formularios largos).
+              <br>• <strong>Clic 2:</strong> Ver sedes con stock disponible en mapa/lista ordenada por cercanía.
+              <br>• <strong>Clic 3:</strong> Presionar "Reservar Turno Express" y descargar el código QR o recibirlo en WhatsApp.
+              <br>• Se incluye selector de alto contraste, tipografía de 19px y alternativa de consulta por SMS para personas sin smartphone.
+            </p>
+          </div>
+
+          <!-- 7. Optimize and Automate -->
+          <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid #dc2626;">
+            <h4 style="color: #dc2626);">7. Optimize and Automate: Alertas de stock bajo y notificaciones automáticas</h4>
+            <p style="font-size: 0.9rem; margin-top: 6px;">
+              • <strong>Reabastecimiento Automatizado:</strong> Disparadores (triggers) en la nube que emiten órdenes electrónicas de despacho inter-bodega automáticas cuando el inventario baja del 15% del consumo diario.
+              <br>• <strong>Notificación Proactiva al Paciente:</strong> Si un paciente encuentra un medicamento agotado, el sistema guarda su solicitud y le envía un mensaje automático de WhatsApp cuando el camión logístico ingresa el lote al dispensario.
+            </p>
           </div>
         </div>
       </div>
@@ -253,28 +643,28 @@
 
 
     <!-- =========================================================================
-         PESTAÑA 2: DASHBOARD DE CONTROL, SLAS Y KPIS EN VIVO
+         PESTAÑA 3: FASE 3 - SLAS E INDICADORES (KPIS)
          ========================================================================= -->
-    <div id="tab-management-dashboard" class="tab-panel">
+    <div id="tab-fase3" class="tab-panel">
+      
       <div class="alert-banner">
         <div class="alert-banner-content">
-          <h3>📈 Tablero de Control Ejecutivo & Telemetría en Tiempo Real</h3>
+          <h3>📊 FASE 3: Acuerdos de Nivel de Servicio (SLAs) e Indicadores (KPIs)</h3>
           <p>
-            Monitoreo en vivo de los Acuerdos de Nivel de Servicio (SLAs) del sistema 24/7 y de los Indicadores Clave de Gestión (KPIs) 
-            para directivos de Nueva EPS y gerencias de operaciones farmacéuticas (Audifarma, Cafam, Cruz Verde).
+            Definición contractual de los Acuerdos de Nivel de Servicio para operación 24/7 y estructuración de los <strong>dos grupos de indicadores clave de gestión (KPIs)</strong>: 
+            Grupo 1 de Experiencia y Servicio al Paciente, y Grupo 2 de Continuidad Técnica y Eficiencia Operacional.
           </p>
         </div>
         <div>
-          <span class="badge badge-success">Principio ITIL: Colaborar y Promover Visibilidad</span>
+          <span class="badge badge-success">Telemetría en Vivo</span>
         </div>
       </div>
 
-      <!-- Cuadrícula de KPIs Principales del Caso de Estudio -->
+      <!-- Cuadrícula de KPIs Principales con Telemetría -->
       <div class="kpi-grid">
-        <!-- SLA 1: Disponibilidad -->
         <div class="kpi-card kpi-blue">
           <div class="kpi-title">
-            <span>SLA 24/7: Disponibilidad Cloud</span>
+            <span>SLA 24/7: Uptime de Plataforma</span>
             <span class="kpi-badge badge-success">Cumplido</span>
           </div>
           <div class="kpi-value">99.94%</div>
@@ -283,76 +673,229 @@
           </div>
         </div>
 
-        <!-- SLA 2: Latencia de APIs -->
         <div class="kpi-card kpi-indigo">
           <div class="kpi-title">
-            <span>SLA: Tiempo de Respuesta APIs</span>
+            <span>SLA: Latencia de APIs</span>
             <span class="kpi-badge badge-success">&lt; 2.0s</span>
           </div>
           <div class="kpi-value">1.18s</div>
           <div class="kpi-target">
-            <span>Percentil 95: 1.42s | P99: 1.85s</span>
+            <span>P95: 1.42s | P99: 1.85s (Redis)</span>
           </div>
         </div>
 
-        <!-- KPI 1: Reducción de Filas Presenciales -->
         <div class="kpi-card kpi-green">
           <div class="kpi-title">
-            <span>KPI: Reducción de Filas</span>
+            <span>KPI 1: Reducción de Filas</span>
             <span class="kpi-badge badge-success">Meta Superada</span>
           </div>
           <div class="kpi-value">64.2%</div>
           <div class="kpi-target">
-            <span>Meta establecida: 60.0% (-138 min promedio)</span>
+            <span>Meta: ≥ 60.0% (De 210 min a 15 min)</span>
           </div>
         </div>
 
-        <!-- KPI 2: Exactitud del Inventario -->
         <div class="kpi-card kpi-amber">
           <div class="kpi-title">
-            <span>KPI: Exactitud Inventario Digital</span>
+            <span>KPI 2: Exactitud de Inventario</span>
             <span class="kpi-badge badge-success">Conforme</span>
           </div>
           <div class="kpi-value">98.6%</div>
           <div class="kpi-target">
-            <span>Meta: ≥ 98.0% (Auditoría física diaria)</span>
+            <span>Meta: ≥ 98.0% (Físico vs Digital)</span>
           </div>
         </div>
 
-        <!-- KPI 3: Satisfacción del Usuario (CSAT) -->
         <div class="kpi-card kpi-green">
           <div class="kpi-title">
-            <span>KPI: Satisfacción del Paciente</span>
+            <span>KPI 3: Satisfacción CSAT</span>
             <span class="kpi-badge badge-success">Excelente</span>
           </div>
           <div class="kpi-value">91.4%</div>
           <div class="kpi-target">
-            <span>CSAT Previo: 38% | Quejas SuperSalud: -72%</span>
+            <span>Meta: ≥ 85.0% (Antes 38%)</span>
           </div>
         </div>
 
-        <!-- KPI 4: Tasa de Adopción Digital -->
         <div class="kpi-card kpi-blue">
           <div class="kpi-title">
-            <span>KPI: Adopción del Canal Web/App</span>
-            <span class="kpi-badge badge-info">Creciendo</span>
+            <span>KPI 4: Adopción Digital</span>
+            <span class="kpi-badge badge-info">71.8%</span>
           </div>
-          <div class="kpi-value">71.8%</div>
+          <div class="kpi-value">1.72M</div>
           <div class="kpi-target">
-            <span>1.72 millones de consultas mensuales</span>
+            <span>Consultas mensuales en línea</span>
           </div>
         </div>
       </div>
 
-      <!-- Gráficos de Monitoreo Dinámico -->
+      <!-- Sección 1: SLAs del Servicio 24/7 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">⏱️ 1. Acuerdos de Nivel de Servicio (SLAs) del Servicio 24/7</h3>
+          <span class="badge badge-primary">Estándar ISO/IEC 20000-1</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Parámetro de Calidad (SLA)</th>
+                <th>Meta Comprometida</th>
+                <th>Medición en Producción</th>
+                <th>Arquitectura de Cumplimiento</th>
+                <th>Impacto ante Incumplimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Disponibilidad (Uptime 24/7)</strong></td>
+                <td><strong>≥ 99.90%</strong> continuo (máx. 43.8 min de inactividad mensual).</td>
+                <td><span class="badge badge-success">99.94%</span></td>
+                <td>Despliegue Multi-AZ en AWS con auto-scaling groups y balanceador de carga elástico ALB.</td>
+                <td>Créditos de facturación en nube y escalamiento inmediato a Dirección de Operaciones TIC.</td>
+              </tr>
+              <tr>
+                <td><strong>Tiempo de Respuesta (Latencia de Consulta)</strong></td>
+                <td><strong>&lt; 1.50 s</strong> en percentil 95 (P95); <strong>&lt; 2.00 s</strong> en P99.</td>
+                <td><span class="badge badge-success">1.18 s</span></td>
+                <td>Caché en memoria con Redis ElastiCache, compresión Brotli y CDN Edge CloudFront.</td>
+                <td>Alarma automática PagerDuty a guardia DevOps si supera 2s por más de 3 minutos consecutivos.</td>
+              </tr>
+              <tr>
+                <td><strong>Tiempo Medio de Recuperación (MTTR)</strong></td>
+                <td><strong>&lt; 30 minutos</strong> para incidentes críticos de Prioridad 1 (P1).</td>
+                <td><span class="badge badge-success">18 min promedio</span></td>
+                <td>Telemetría integral con Datadog / CloudWatch y conmutación automática por DNS Route 53.</td>
+                <td>Auditoría forense obligatoria y análisis de causa raíz (Post-Mortem Blameless) en 24h.</td>
+              </tr>
+              <tr>
+                <td><strong>Objetivo de Punto de Recuperación (RPO)</strong></td>
+                <td><strong>&lt; 5 minutos</strong> de pérdida máxima de datos transaccionales.</td>
+                <td><span class="badge badge-success">1.5 minutos</span></td>
+                <td>Replicación continua síncrona de base de datos Aurora PostgreSQL y snapshots en S3 Glacier.</td>
+                <td>Restauración automatizada y validación quincenal de snapshots.</td>
+              </tr>
+              <tr>
+                <td><strong>Objetivo de Tiempo de Recuperación (RTO)</strong></td>
+                <td><strong>&lt; 15 minutos</strong> para restablecimiento total en región secundaria.</td>
+                <td><span class="badge badge-success">11 minutos</span></td>
+                <td>Infraestructura como Código (Terraform) y pipelines de despliegue continuo con GitHub Actions.</td>
+                <td>Simulacros semestrales de Chaos Engineering y failover multirregión.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sección 2: Dos Grupos de Indicadores de Gestión (KPIs) -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">📈 2. Dos Grupos de Indicadores Clave de Gestión (KPIs)</h3>
+          <span class="badge badge-info">Fórmulas y Medición Cuantitativa</span>
+        </div>
+
+        <!-- Grupo 1 -->
+        <h4 style="color: var(--primary); margin: 10px 0 8px;">Grupo 1: Indicadores de Experiencia, Servicio y Descongestión del Paciente</h4>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Indicador (KPI)</th>
+                <th>Línea Base</th>
+                <th>Meta Fijada</th>
+                <th>Resultado</th>
+                <th>Fórmula Matemática de Cálculo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Reducción de Filas y Espera</strong></td>
+                <td>210 minutos promedio</td>
+                <td><strong>≥ 60.0%</strong></td>
+                <td><span class="badge badge-success">64.2% (15 min)</span></td>
+                <td>\[ \Delta T_{espera} = \left( \frac{T_{historico} - T_{actual}}{T_{historico}} \right) \times 100 \]</td>
+              </tr>
+              <tr>
+                <td><strong>Exactitud de Inventario (Físico vs Digital)</strong></td>
+                <td>74.2% coincidencia</td>
+                <td><strong>≥ 98.0%</strong></td>
+                <td><span class="badge badge-success">98.6%</span></td>
+                <td>\[ E_{inv} = \left( 1 - \frac{\sum |Stock_{digital} - Stock_{fisico}|}{\sum Stock_{fisico}} \right) \times 100 \]</td>
+              </tr>
+              <tr>
+                <td><strong>Satisfacción del Paciente (CSAT)</strong></td>
+                <td>38.0% satisfacción</td>
+                <td><strong>≥ 85.0%</strong></td>
+                <td><span class="badge badge-success">91.4%</span></td>
+                <td>\[ CSAT = \left( \frac{\text{Calificaciones 4 y 5 Estrellas}}{\text{Total Encuestas Respondidas}} \right) \times 100 \]</td>
+              </tr>
+              <tr>
+                <td><strong>Resolución en Primer Contacto (FCR)</strong></td>
+                <td>42.0% de éxito</td>
+                <td><strong>≥ 80.0%</strong></td>
+                <td><span class="badge badge-success">84.7%</span></td>
+                <td>\[ FCR = \left( \frac{\text{Reclamos exitosos en primera farmacia visitada}}{\text{Total de turnos emitidos}} \right) \times 100 \]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Grupo 2 -->
+        <h4 style="color: var(--secondary); margin: 24px 0 8px;">Grupo 2: Indicadores de Rendimiento Técnico, Continuidad y Eficiencia Operacional</h4>
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Indicador (KPI)</th>
+                <th>Línea Base</th>
+                <th>Meta Fijada</th>
+                <th>Resultado</th>
+                <th>Fórmula Matemática de Cálculo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tasa de Adopción Omnicanal Digital</strong></td>
+                <td>12.0% uso web</td>
+                <td><strong>≥ 65.0%</strong></td>
+                <td><span class="badge badge-success">71.8%</span></td>
+                <td>\[ T_{adopcion} = \left( \frac{\text{Consultas vía Web/WhatsApp}}{\text{Total de Fórmulas Dispensadas}} \right) \times 100 \]</td>
+              </tr>
+              <tr>
+                <td><strong>Latencia de Sincronización de Inventarios</strong></td>
+                <td>24 a 48 horas</td>
+                <td><strong>&lt; 60 segundos</strong></td>
+                <td><span class="badge badge-success">28 segundos</span></td>
+                <td>\[ T_{sync} = T_{recepcion\_cloud} - T_{modificacion\_pos\_farmacia} \]</td>
+              </tr>
+              <tr>
+                <td><strong>Tasa de Disponibilidad del API Gateway</strong></td>
+                <td>98.1% (caídas)</td>
+                <td><strong>≥ 99.9%</strong></td>
+                <td><span class="badge badge-success">99.96%</span></td>
+                <td>\[ D_{api} = \left( \frac{T_{operacion\_total} - T_{indisponibilidad}}{T_{operacion\_total}} \right) \times 100 \]</td>
+              </tr>
+              <tr>
+                <td><strong>Reducción de Reclamaciones SuperSalud</strong></td>
+                <td>8,400 PQRs/mes</td>
+                <td><strong>≥ 50.0%</strong></td>
+                <td><span class="badge badge-success">72.3% (-6,070 PQRs)</span></td>
+                <td>\[ \Delta PQR = \left( \frac{PQR_{anteriores} - PQR_{actuales}}{PQR_{anteriores}} \right) \times 100 \]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Gráficos Dinámicos SVG en Tiempo Real -->
       <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 24px; margin-bottom: 24px;">
-        <!-- Gráfico 1: Descongestión de Picos de Demanda -->
         <div class="chart-container">
           <div class="chart-header">
             <div>
               <h4 class="chart-title">📊 Aplanamiento de la Curva de Demanda en Farmacias</h4>
               <p style="font-size: 0.8rem; color: var(--text-muted);">
-                Comparativa de afluencia por franja horaria: Tradicional sin cita vs. Turno Digital Express ITIL 4.
+                Afluencia por franja horaria: Tradicional sin cita (rojo) vs. Turno Digital Express ITIL 4 (verde).
               </p>
             </div>
             <span class="badge badge-success">Mitigación de Picos</span>
@@ -360,7 +903,6 @@
           <div id="chart-hourly-traffic"></div>
         </div>
 
-        <!-- Gráfico 2: Cuota de Dispensación por Gestor Farmacéutico -->
         <div class="chart-container">
           <div class="chart-header">
             <div>
@@ -374,626 +916,28 @@
           <div id="chart-dispensary-share"></div>
         </div>
       </div>
-
-      <!-- Tabla de Telemetría de Servicios Técnicos -->
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">🖥️ Telemetría y Salud de los Componentes Técnicos (SRE / DevOps)</h4>
-          <span class="badge badge-success">Todos los Servicios Operacionales</span>
-        </div>
-        <div class="table-responsive">
-          <table class="academic-table">
-            <thead>
-              <tr>
-                <th>Componente / Microservicio</th>
-                <th>Tipo de Tecnología</th>
-                <th>Proveedor / Infraestructura</th>
-                <th>Latencia P95</th>
-                <th>Disponibilidad (30d)</th>
-                <th>Estado Operativo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>API Gateway & Auth</strong></td>
-                <td>Amazon API Gateway + OAuth 2.0 / JWT</td>
-                <td>AWS Cloud (us-east-1)</td>
-                <td>180 ms</td>
-                <td>99.98%</td>
-                <td><span class="badge badge-success">Saludable</span></td>
-              </tr>
-              <tr>
-                <td><strong>Conector Audifarma S.A.</strong></td>
-                <td>Webhook RESTful + CDC (Change Data Capture)</td>
-                <td>Middleware In-House</td>
-                <td>320 ms</td>
-                <td>99.92%</td>
-                <td><span class="badge badge-success">Saludable</span></td>
-              </tr>
-              <tr>
-                <td><strong>Conector Droguerías Cafam</strong></td>
-                <td>GraphQL Endpoint + VPN Site-to-Site</td>
-                <td>Middleware In-House</td>
-                <td>290 ms</td>
-                <td>99.95%</td>
-                <td><span class="badge badge-success">Saludable</span></td>
-              </tr>
-              <tr>
-                <td><strong>Conector Cruz Verde</strong></td>
-                <td>REST API con cola RabbitMQ</td>
-                <td>Middleware In-House</td>
-                <td>310 ms</td>
-                <td>99.91%</td>
-                <td><span class="badge badge-success">Saludable</span></td>
-              </tr>
-              <tr>
-                <td><strong>Caché Transaccional de Stock</strong></td>
-                <td>Redis Cluster en memoria (Multi-Node)</td>
-                <td>AWS ElastiCache</td>
-                <td>8 ms</td>
-                <td>99.99%</td>
-                <td><span class="badge badge-success">Saludable</span></td>
-              </tr>
-              <tr>
-                <td><strong>Motor de Notificaciones</strong></td>
-                <td>Meta WhatsApp Cloud API + Twilio SMS</td>
-                <td>SaaS / Cloud API</td>
-                <td>450 ms</td>
-                <td>99.88%</td>
-                <td><span class="badge badge-success">Saludable</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </div>
 
 
     <!-- =========================================================================
-         PESTAÑA 3: VALUE STREAM MAPPING (FLUJO DE VALOR AS-IS VS TO-BE)
+         PESTAÑA 4: PITCH DE SUSTENTACIÓN (EQUIPO DE 3 INTEGRANTES)
          ========================================================================= -->
-    <div id="tab-value-stream" class="tab-panel">
-      <div class="alert-banner">
-        <div class="alert-banner-content">
-          <h3>🔄 Mapeo del Flujo de Valor del Servicio de Medicamentos (ITIL 4)</h3>
-          <p>
-            Análisis de ingeniería de procesos desde la generación de la fórmula médica en consulta hasta la entrega efectiva 
-            al paciente, identificando y erradicando sistemáticamente los cuellos de botella y actividades sin valor añadido (Muda).
-          </p>
-        </div>
-        <div>
-          <span class="badge badge-success">Tiempo Total: De 210 min a 15 min</span>
-        </div>
-      </div>
-
-      <div class="vsm-comparison">
-        <!-- Flujo As-Is (Tradicional Manual) -->
-        <div class="vsm-column as-is">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-            <h4 style="color: var(--accent-red); font-size: 1.15rem;">❌ Flujo Tradicional (As-Is: Manual y Ciego)</h4>
-            <span class="badge badge-danger">Duración Media: 3.5 a 4.5 Horas</span>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">
-            Proceso fragmentado, sin visibilidad de existencias, altamente dependiente del desplazamiento físico a ciegas del paciente.
-          </p>
-
-          <div class="vsm-timeline">
-            <div class="vsm-step">
-              <div class="vsm-node value">1</div>
-              <div class="vsm-desc">
-                <h5>Médico formula en sistema de consulta</h5>
-                <p>Genera orden física o fórmula digital desarticulada del inventario del gestor farmacéutico.</p>
-                <span style="font-size: 0.75rem; color: var(--text-muted);">Tiempo: 10 min (Aporta Valor Clínico)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node waste">2</div>
-              <div class="vsm-desc">
-                <h5>Desplazamiento a ciegas a la farmacia asignada</h5>
-                <p>El paciente viaja en transporte público o a pie sin saber si hay existencias de su medicina.</p>
-                <span class="vsm-waste-tag">CUELLO DE BOTELLA: Desplazamiento Inútil (45 min)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node waste">3</div>
-              <div class="vsm-desc">
-                <h5>Fila presencial física a la intemperie</h5>
-                <p>El afiliado toma ficha de turno físico y espera de pie o sentado entre 120 y 180 minutos.</p>
-                <span class="vsm-waste-tag">DESPERDICIO CRÍTICO: Espera Pasiva (150 min promedio)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node waste">4</div>
-              <div class="vsm-desc">
-                <h5>Atención en ventanilla y "Quiebre de Stock"</h5>
-                <p>El regente de farmacia digita la fórmula y anuncia: <em>"No hay Losartán, tiene que volver el viernes o ir a otra sede"</em>.</p>
-                <span class="vsm-waste-tag">DESPERDICIO GRAVE: Falla del Servicio (Frustración y Quejas)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node waste">5</div>
-              <div class="vsm-desc">
-                <h5>Peregrinaje o Radicación de PQR</h5>
-                <p>El paciente debe trasladarse a otra sede a repetir la fila o formular una queja ante la SuperSalud.</p>
-                <span class="vsm-waste-tag">SOBREPROCESO: Costos médicos y desapego al tratamiento</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flujo To-Be (Optimizado con ITIL 4) -->
-        <div class="vsm-column to-be">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-            <h4 style="color: var(--accent-green); font-size: 1.15rem;">✅ Flujo Optimizado (To-Be: ITIL 4 & Digital)</h4>
-            <span class="badge badge-success">Duración Media: 10 a 15 Minutos</span>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">
-            Proceso guiado por eventos, visibilidad en tiempo real de inventarios interconectados y atención programada sin colas.
-          </p>
-
-          <div class="vsm-timeline">
-            <div class="vsm-step">
-              <div class="vsm-node value">1</div>
-              <div class="vsm-desc">
-                <h5>Prescripción Electrónica Integrada (MIPRES / HCE)</h5>
-                <p>El médico formula; el sistema dispara un evento a la plataforma Cloud y reserva saldo conceptual.</p>
-                <span style="font-size: 0.75rem; color: #047857; font-weight: 600;">Tiempo: Inmediato (Disparo en API Gateway)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node value">2</div>
-              <div class="vsm-desc">
-                <h5>Consulta Omnicanal en Tiempo Real (3 Clics)</h5>
-                <p>El paciente recibe alerta a WhatsApp o entra a la web y ve qué farmacia cercana tiene existencias reales.</p>
-                <span style="font-size: 0.75rem; color: #047857; font-weight: 600;">Tiempo: &lt; 2 minutos desde el celular o cabina</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node value">3</div>
-              <div class="vsm-desc">
-                <h5>Reserva de Turno Express o Solicitud a Domicilio</h5>
-                <p>El paciente reserva su dosis con código QR o solicita envío prioritario (adultos mayores &gt; 70 años).</p>
-                <span style="font-size: 0.75rem; color: #047857; font-weight: 600;">Tiempo: 1 minuto (Stock bloqueado por 4 horas)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node value">4</div>
-              <div class="vsm-desc">
-                <h5>Llegada al Dispensario en Ventana Programada</h5>
-                <p>El paciente asiste a su hora fijada, escanea su código QR en el tótem prioritario "Turno Express".</p>
-                <span style="font-size: 0.75rem; color: #047857; font-weight: 600;">Tiempo: Cero fila externa (Espera máx. 5 min)</span>
-              </div>
-            </div>
-
-            <div class="vsm-step">
-              <div class="vsm-node value">5</div>
-              <div class="vsm-desc">
-                <h5>Dispensación Rápida y Actualización Inmediata</h5>
-                <p>El regente pistolea el QR, entrega el paquete ya preparado y el stock se descuenta en la base Cloud en 10ms.</p>
-                <span style="font-size: 0.75rem; color: #047857; font-weight: 600;">Valor Generado: Satisfacción 91.4% y adherencia médica</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Resumen Lean de Eliminación de Desperdicios -->
-      <div class="card">
-        <h4 class="card-title">🧹 Matriz de Desperdicios Eliminados (Lean Healthcare & ITIL 4)</h4>
-        <div class="table-responsive">
-          <table class="academic-table">
-            <thead>
-              <tr>
-                <th>Tipo de Desperdicio (Muda)</th>
-                <th>Manifestación en el Modelo Tradicional</th>
-                <th>Contramedida de Ingeniería ITIL 4 Implementada</th>
-                <th>Impacto Cuantitativo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Espera (Waiting)</strong></td>
-                <td>Pacientes esperando horas en fila de pie sin saber si hay medicamento disponible.</td>
-                <td>Turno Digital Express con reserva horaria y semáforo de disponibilidad antes de salir de casa.</td>
-                <td>Reducción de 180 min a 8 min en sala de espera.</td>
-              </tr>
-              <tr>
-                <td><strong>Transporte (Transport)</strong></td>
-                <td>Desplazamientos repetitivos a múltiples farmacias buscando medicamentos agotados.</td>
-                <td>Geolocalización con inventario consolidado multi-operador en la app y domicilio para adultos mayores.</td>
-                <td>Ahorro del 100% de viajes en vano; reducción de huella de carbono.</td>
-              </tr>
-              <tr>
-                <td><strong>Defectos / Reprocesos</strong></td>
-                <td>Fórmulas vencidas en fila, errores de digitación de cédula y discordancia de inventario físico vs sistema.</td>
-                <td>Validación previa automática con ADRES y MIPRES; sincronización de stock con pistoleo de código de barras.</td>
-                <td>Exactitud de inventario elevada al 98.6%; eliminación de rebotes.</td>
-              </tr>
-              <tr>
-                <td><strong>Talento Subutilizado</strong></td>
-                <td>Regentes de farmacia dedicados a calmar reclamos de pacientes molestos en lugar de asesorar farmacológicamente.</td>
-                <td>Filtrado digital del flujo; el regente se enfoca en entrega ágil y educación al paciente sobre la dosis correcta.</td>
-                <td>Incremento de 40% en productividad del personal de farmacia.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- =========================================================================
-         PESTAÑA 4: INFORME TÉCNICO ESTRUCTURADO (FASES 1, 2 Y 3)
-         ========================================================================= -->
-    <div id="tab-technical-report" class="tab-panel">
-      <div class="alert-banner">
-        <div class="alert-banner-content">
-          <h3>📘 Documento de Ingeniería: Informe Técnico Completo del Parcial</h3>
-          <p>
-            Desglose formal de las 3 fases exigidas por la rúbrica: Las 4 Dimensiones de ITIL 4, los 7 Principios Guía y el diseño 
-            de Acuerdos de Nivel de Servicio (SLAs) e Indicadores de Rendimiento (KPIs).
-          </p>
-        </div>
-        <div>
-          <button onclick="printAcademicReport()" class="btn btn-primary btn-sm">🖨️ Imprimir / Guardar en PDF</button>
-        </div>
-      </div>
-
-      <!-- FASE 1: Las 4 Dimensiones de ITIL 4 -->
-      <div class="accordion-item open">
-        <button class="accordion-header">
-          <span>FASE 1: Diagnóstico y Diseño Holístico (Las 4 Dimensiones de ITIL 4)</span>
-          <span class="accordion-icon">▼</span>
-        </button>
-        <div class="accordion-content">
-          <br>
-          <h4 style="color: var(--primary); margin-bottom: 8px;">1. Dimensión: Organizaciones y Personas</h4>
-          <p>
-            Para garantizar que la transformación digital no falle por resistencia humana ni falta de gobernanza, se estructura 
-            un modelo organizacional basado en responsabilidades RACI (Responsible, Accountable, Consulted, Informed) y un plan de gestión del cambio:
-          </p>
-          <ul style="margin: 10px 0 14px 24px;">
-            <li><strong>Product Owner (Líder Digital Nueva EPS):</strong> Responsable del backlog del servicio, alineación con la Vicepresidencia de Salud y cumplimiento normativo SuperSalud.</li>
-            <li><strong>Arquitecto de Soluciones & Equipo de Desarrollo:</strong> Ingenieros frontend, backend, especialistas en integración HL7 FHIR y Data Engineers para modelos predictivos de desabastecimiento.</li>
-            <li><strong>Equipo de Soporte Técnico 24/7 (SRE / DevOps / Mesa de Ayuda):</strong> Monitoreo de disponibilidad continua, atención a incidentes mayores y soporte de conectividad con farmacias.</li>
-            <li><strong>Regentes y Dispensadores de Farmacia (Operadores Aliados):</strong> Personal operativo capacitado para atención de la ventanilla preferencial "Turno Express" y pistoleo óptico de lotes.</li>
-            <li><strong>Usuarios Pacientes y Cuidadores:</strong> Beneficiarios directos con interfaces simplificadas y canales asistidos para adultos mayores.</li>
-          </ul>
-
-          <div style="background: #f8fafc; border-left: 4px solid var(--primary); padding: 12px 16px; margin: 12px 0; border-radius: 4px;">
-            <strong>Plan de Gestión del Cambio (Marco Prosci ADKAR & Kotter):</strong>
-            <p style="font-size: 0.88rem; margin-top: 4px;">
-              <strong>1. Awareness (Conciencia):</strong> Comunicar al personal de farmacia que el sistema no busca reemplazarlos, sino protegerlos del estrés de atender pacientes molestos por quiebres de inventario.<br>
-              <strong>2. Desire (Deseo):</strong> Demostrar que con el pre-agendamiento digital la carga operativa se distribuye uniformemente a lo largo del día, eliminando picos asfixiantes a las 7:00 a. m.<br>
-              <strong>3. Knowledge (Conocimiento):</strong> Microcápsulas de video de 3 minutos y manuales visuales para el uso del escáner QR de entrega rápida.<br>
-              <strong>4. Ability (Habilidad):</strong> Simulacros en vivo en 10 farmacias piloto antes del despliegue masivo nacional.<br>
-              <strong>5. Reinforcement (Refuerzo):</strong> Reconocimiento mensual y bonificaciones a las sedes con mayor fidelidad de inventario y menores tiempos de entrega.
-            </p>
-          </div>
-
-          <h4 style="color: var(--primary); margin: 18px 0 8px;">2. Dimensión: Información y Tecnología</h4>
-          <p>
-            Se implementa una arquitectura desacoplada basada en microservicios, orientada a eventos (EDA - Event-Driven Architecture) y protegida bajo el principio de Confidencialidad, Integridad y Disponibilidad (CIA Triad):
-          </p>
-          <ul style="margin: 10px 0 14px 24px;">
-            <li><strong>Capa de Presentación Omnicanal:</strong> Aplicación Web Progresiva (PWA) de carga ultra-rápida (&lt; 1 segundo), adaptada a redes móviles colombianas 3G/4G, y Chatbot transaccional en WhatsApp Business Cloud API.</li>
-            <li><strong>Capa de Integración y API Gateway:</strong> Kong / AWS API Gateway con autenticación OAuth 2.0 y JWT, limitador de tasa (Rate Limiting) para evitar ataques de denegación de servicio (DDoS).</li>
-            <li><strong>Middleware de Interoperabilidad con Farmacias Aliadas:</strong> Conectores REST/GraphQL que consumen los inventarios de Audifarma, Cafam y Cruz Verde mediante Change Data Capture (CDC) y Webhooks, traduciendo datos heterogéneos al estándar internacional de salud <strong>HL7 FHIR (Fast Healthcare Interoperability Resources)</strong>.</li>
-            <li><strong>Capa de Datos Híbrida de Alta Disponibilidad:</strong> Amazon DynamoDB / PostgreSQL para persistencia de transacciones y un clúster en memoria <strong>Redis</strong> que mantiene en caché los estados de disponibilidad con latencia &lt; 15 milisegundos.</li>
-            <li><strong>Seguridad y Protección de Datos Médicos (Ley 1581 de 2012 & Habeas Data):</strong> Cifrado en tránsito TLS 1.3 con certificados SSL clase bancaria y cifrado en reposo AES-256. Tokenización de datos sensibles de diagnóstico (CIE-10); el sistema solo muestra nombre del medicamento, dosis y disponibilidad sin exponer antecedentes clínicos.</li>
-          </ul>
-
-          <h4 style="color: var(--primary); margin: 18px 0 8px;">3. Dimensión: Socios y Proveedores</h4>
-          <p>
-            Nueva EPS no gestiona bodegas farmacéuticas directas; su operación depende críticamente de una red de proveedores externos que deben sincronizarse bajo Acuerdos de Nivel Operacional (OLAs):
-          </p>
-          <ul style="margin: 10px 0 14px 24px;">
-            <li><strong>Gestores Farmacéuticos (Audifarma, Cafam, Cruz Verde):</strong> Proveedores clave de la logística física. Se integran sus sistemas POS a través de contratos de interoperabilidad con penalizaciones por discrepancias de inventario mayores al 2%.</li>
-            <li><strong>Proveedores de Nube (AWS / Azure):</strong> Infraestructura multirregión con Acuerdo de Nivel de Servicio contractual del 99.95% de disponibilidad, servidores en centros de datos con certificación ISO 27001.</li>
-            <li><strong>Proveedores de Mensajería Masiva (Meta / Infobip / Twilio):</strong> Pasarelas de comunicación para envío masivo de mensajes WhatsApp y SMS transaccionales con entrega garantizada en menos de 30 segundos.</li>
-          </ul>
-          <div style="background: #f8fafc; border-left: 4px solid var(--secondary); padding: 12px 16px; margin: 12px 0; border-radius: 4px;">
-            <strong>Esquema de Soporte Técnico: Híbrido Estratégico (In-house vs Outsourcing)</strong>
-            <p style="font-size: 0.88rem; margin-top: 4px;">
-              • <strong>Nivel 1 (L1 - Mesa de Ayuda 24/7): OUTSOURCING ESPECIALIZADO</strong>. Centro de contacto en salud para resolución de preguntas frecuentes, desbloqueo de cuentas y triaje inicial mediante chatbots con IA.<br>
-              • <strong>Nivel 2 (L2 - Soporte de Aplicaciones e Integraciones): EQUIPO IN-HOUSE NUEVA EPS</strong>. Ingenieros de sistemas dedicados a resolver fallas de sincronización entre APIs de farmacias y la base de datos central.<br>
-              • <strong>Nivel 3 (L3 - Infraestructura Cloud, DevOps y Seguridad): EQUIPO IN-HOUSE + SOPORTE EMPRESARIAL CLOUD</strong>. Garantiza la custodia del código fuente, soberanía de datos y resolución de incidentes críticos de arquitectura.
-            </p>
-          </div>
-
-          <h4 style="color: var(--primary); margin: 18px 0 8px;">4. Dimensión: Flujos de Valor y Procesos (Value Streams)</h4>
-          <p>
-            El flujo de valor se redefinió partiendo de la premisa de <em>"Entregar salud y bienestar con cero esperas inútiles"</em>. 
-            Se eliminaron las inspecciones redundantes de papeles, autorizaciones manuales en ventanilla y esperas a ciegas, sustituyéndolas por una reserva digital confirmada y una preparación de pedidos previa (Picking anticipado) en farmacia.
-          </p>
-        </div>
-      </div>
-
-      <!-- FASE 2: Los 7 Principios Guía de ITIL 4 -->
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>FASE 2: Despliegue de los 7 Principios Guía de ITIL 4 (Justificación Técnica)</span>
-          <span class="accordion-icon">▼</span>
-        </button>
-        <div class="accordion-content">
-          <br>
-          <p>
-            Cada decisión tecnológica en este proyecto está anclada directamente en uno de los 7 principios rectores de ITIL 4:
-          </p>
-
-          <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 14px;">
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">1. Focus on Value (Enfocarse en el valor)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> Un servicio de TI no se mide por la cantidad de código, sino por el valor percibido por sus interesados. 
-                Para el paciente, el valor es <strong>tiempo de vida recuperado</strong> (ahorrarse 3 horas de fila) y la certidumbre de su tratamiento. 
-                Para la Nueva EPS, el valor es la <strong>reducción drástica de quejas ante la SuperSalud (disminución del 72%)</strong>, descongestión física de sedes y optimización del gasto médico evitando hospitalizaciones por tratamientos interrumpidos.
-              </p>
-            </div>
-
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">2. Start Where You Are (Empezar donde se está)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> Cambiar los sistemas de inventario y ERPs existentes en las cadenas aliadas (como SAP o SysMan en Audifarma o Cruz Verde) costaría decenas de millones de dólares y tomaría años. 
-                La solución de ingeniería consistió en <strong>reutilizar los sistemas legados</strong> mediante una capa middleware con Webhooks y APIs REST seguras, aprovechando también las bases de datos de afiliados de Nueva EPS y el módulo MIPRES del Ministerio de Salud sin reconstruir nada desde cero.
-              </p>
-            </div>
-
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">3. Progress Iteratively with Feedback (Progresar iterativamente con retroalimentación)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> Los proyectos de Big Bang suelen fracasar en salud. Se diseñó un <strong>Producto Mínimo Viable (MVP v1.0)</strong> focalizado en los 50 medicamentos de mayor rotación (antihipertensivos, hipoglicemiantes, analgésicos) en 20 sedes de Bogotá y Medellín. 
-                El sistema incluye telemetría de satisfacción instantánea (encuesta de 1 a 5 estrellas al terminar la entrega) y botón de reporte de inconsistencia, retroalimentando el algoritmo de abastecimiento semanalmente.
-              </p>
-            </div>
-
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">4. Collaborate and Promote Visibility (Colaborar y promover visibilidad)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> El mayor generador de ansiedad en el paciente y de caos administrativo es la opacidad informativa. Se diseñaron <strong>dos niveles de dashboards transparentes</strong>: para los directivos y farmacias, tableros de control predictivo con alertas de quiebre de stock; para los pacientes, un semáforo visual en tiempo real (Verde, Amarillo, Rojo) con fecha estimada de reposición cuando el producto está en tránsito logístico.
-              </p>
-            </div>
-
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">5. Think and Work Holistically (Pensar y trabajar holísticamente)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> Una excelente app móvil es inútil si al llegar a la farmacia el paciente encuentra la misma cola desordenada. Se diseñó la solución integrando software con infraestructura física: se habilitó el módulo físico <strong>"Turno Express Digital"</strong> en cada sede y se alineó el personal de bodega para preparar previamente las fórmulas reservadas, garantizando que el canal digital y el canal físico funcionen como un solo engranaje.
-              </p>
-            </div>
-
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">6. Keep It Simple and Practical (Mantenerlo simple y práctico)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> Gran parte de los afiliados a Nueva EPS son adultos mayores o usuarios con bajo nivel de alfabetización digital. Se implementó la regla de oro de los <strong>3 Clics</strong> (Cédula &rarr; Ver Farmacia &rarr; Generar Turno Express), tipografía de alto contraste (estándar WCAG 2.1 AA), textos directos sin tecnicismos médicos confusos y canal alternativo por mensaje de WhatsApp para quienes no saben navegar portales web complejos.
-              </p>
-            </div>
-
-            <div style="padding: 12px; border: 1px solid var(--border-color); border-radius: 8px;">
-              <h5 style="color: var(--primary); font-size: 0.98rem;">7. Optimize and Automate (Optimizar y automatizar)</h5>
-              <p style="font-size: 0.88rem; margin-top: 4px;">
-                <strong>¿Por qué?</strong> Las tareas repetitivas deben delegarse a la tecnología para liberar el talento humano hacia labores asistenciales. Se automatizaron los disparadores de reabastecimiento (cuando una farmacia baja del 15% del inventario promedio diario, el sistema genera la orden de despacho a bodega central) y se crearon notificaciones push automáticas a WhatsApp que avisan al paciente cuando un medicamento previamente agotado ha sido reabastecido.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FASE 3: SLAs y KPIs -->
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>FASE 3: Acuerdos de Nivel de Servicio (SLAs) e Indicadores de Gestión (KPIs)</span>
-          <span class="accordion-icon">▼</span>
-        </button>
-        <div class="accordion-content">
-          <br>
-          <h4 style="color: var(--primary); margin-bottom: 8px;">1. Acuerdos de Nivel de Servicio (SLAs) del Sistema 24/7</h4>
-          <p>
-            Para garantizar la confiabilidad crítica del servicio de salud, se definen los siguientes compromisos técnicos contractuales:
-          </p>
-          <div class="table-responsive">
-            <table class="academic-table">
-              <thead>
-                <tr>
-                  <th>Parámetro SLA</th>
-                  <th>Objetivo Comprometido</th>
-                  <th>Mecanismo Técnico de Cumplimiento</th>
-                  <th>Penalización / Consecuencia</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Disponibilidad de la Plataforma (Uptime)</strong></td>
-                  <td><strong>≥ 99.90%</strong> en régimen 24/7/365 (máximo 43 minutos de inactividad no programada al mes).</td>
-                  <td>Arquitectura multizona (Multi-AZ) en AWS con auto-scaling group y balanceador de carga elástico (ALB).</td>
-                  <td>Crédito de facturación en nube y escalamiento inmediato a Dirección de Operaciones TIC.</td>
-                </tr>
-                <tr>
-                  <td><strong>Tiempo de Respuesta de APIs de Consulta</strong></td>
-                  <td><strong>&lt; 1.5 s</strong> en el percentil 95 (P95); <strong>&lt; 2.0 s</strong> en el percentil 99 (P99).</td>
-                  <td>Indexación optimizada en PostgreSQL, almacenamiento en memoria Redis y CDN Edge CloudFront.</td>
-                  <td>Alerta automática a guardia DevOps (PagerDuty) si la latencia supera 2.0s por más de 3 minutos consecutivos.</td>
-                </tr>
-                <tr>
-                  <td><strong>Tiempo Medio de Recuperación (MTTR)</strong></td>
-                  <td><strong>&lt; 30 minutos</strong> para incidentes de Prioridad 1 (P1 - caída total de servicio).</td>
-                  <td>Monitoreo proactivo con Datadog / CloudWatch y conmutación automática de tráfico (Failover DNS).</td>
-                  <td>Revisión de causa raíz (Post-Mortem Blameless) obligatoria en menos de 24 horas hábiles.</td>
-                </tr>
-                <tr>
-                  <td><strong>Objetivo de Punto de Recuperación (RPO)</strong></td>
-                  <td><strong>&lt; 5 minutos</strong> de pérdida máxima de datos transaccionales en caso de desastre.</td>
-                  <td>Replicación continua de logs de base de datos a almacenamiento inmutable Amazon S3 Glacier.</td>
-                  <td>Auditoría de integridad forense y restauración de snapshot programada quincenalmente.</td>
-                </tr>
-                <tr>
-                  <td><strong>Objetivo de Tiempo de Recuperación (RTO)</strong></td>
-                  <td><strong>&lt; 15 minutos</strong> para restablecimiento operativo completo en región de contingencia.</td>
-                  <td>Infraestructura como Código (IaC con Terraform) y despliegue automatizado en región secundaria.</td>
-                  <td>Simulacros semestrales de recuperación de desastres (Chaos Engineering).</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h4 style="color: var(--primary); margin: 20px 0 8px;">2. Indicadores Clave de Desempeño (KPIs de Gestión de Negocio)</h4>
-          <div class="table-responsive">
-            <table class="academic-table">
-              <thead>
-                <tr>
-                  <th>Indicador Clave (KPI)</th>
-                  <th>Línea Base (Tradicional)</th>
-                  <th>Meta Establecida</th>
-                  <th>Resultado Obtenido</th>
-                  <th>Fórmula de Cálculo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Reducción de Filas y Tiempo de Espera</strong></td>
-                  <td>210 minutos promedio</td>
-                  <td><strong>Reducción ≥ 60%</strong></td>
-                  <td><span class="badge badge-success">64.2% (15 min espera)</span></td>
-                  <td>\[ \Delta T = \frac{T_{espera\_anterior} - T_{espera\_actual}}{T_{espera\_anterior}} \times 100 \]</td>
-                </tr>
-                <tr>
-                  <td><strong>Exactitud de Inventario (Digital vs Físico)</strong></td>
-                  <td>74.2% (descuadres frecuentes)</td>
-                  <td><strong>≥ 98.0%</strong></td>
-                  <td><span class="badge badge-success">98.6% exactitud</span></td>
-                  <td>\[ E_{inv} = \left( 1 - \frac{\sum |Stock_{sistema} - Stock_{fisico}|}{Stock_{total}} \right) \times 100 \]</td>
-                </tr>
-                <tr>
-                  <td><strong>Índice de Satisfacción del Usuario (CSAT)</strong></td>
-                  <td>38% de satisfacción</td>
-                  <td><strong>≥ 85.0%</strong></td>
-                  <td><span class="badge badge-success">91.4% satisfacción</span></td>
-                  <td>\[ CSAT = \frac{\text{Respuestas 4 y 5 Estrellas}}{\text{Total Encuestas Respondidas}} \times 100 \]</td>
-                </tr>
-                <tr>
-                  <td><strong>Tasa de Adopción del Canal Digital</strong></td>
-                  <td>12% (web básica anterior)</td>
-                  <td><strong>≥ 65.0%</strong></td>
-                  <td><span class="badge badge-success">71.8% de afiliados</span></td>
-                  <td>\[ T_{adopcion} = \frac{\text{Consultas vía Web/WhatsApp}}{\text{Total de Fórmulas Dispensadas}} \times 100 \]</td>
-                </tr>
-                <tr>
-                  <td><strong>Resolución en Primer Contacto (FCR)</strong></td>
-                  <td>42% (pacientes rebotaban)</td>
-                  <td><strong>≥ 80.0%</strong></td>
-                  <td><span class="badge badge-success">84.7% de éxito</span></td>
-                  <td>\[ FCR = \frac{\text{Reclamos exitosos en primera sede visitada}}{\text{Total de turnos emitidos}} \times 100 \]</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- =========================================================================
-         PESTAÑA 5: MATRIZ DE DECISIONES DE LOS 7 PRINCIPIOS GUÍA ITIL 4
-         ========================================================================= -->
-    <div id="tab-itil-matrix" class="tab-panel">
-      <div class="alert-banner">
-        <div class="alert-banner-content">
-          <h3>⚖️ Matriz Resumen de los 7 Principios Guía de ITIL 4</h3>
-          <p>
-            Cuadro comparativo riguroso que relaciona cada Principio Guía de ITIL 4 con la <strong>Decisión Tecnológica y de Ingeniería adoptada</strong>, 
-            el porqué de su elección y el <strong>Impacto Cuantificable en la operación de Nueva EPS</strong>.
-          </p>
-        </div>
-        <div>
-          <span class="badge badge-primary">Rúbrica Oficial Fase 2</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="table-responsive">
-          <table class="academic-table">
-            <thead>
-              <tr>
-                <th style="width: 18%;">Principio ITIL 4</th>
-                <th style="width: 28%;">Decisión Tecnológica y de Ingeniería</th>
-                <th style="width: 30%;">Justificación Técnica (¿Por qué?)</th>
-                <th style="width: 24%;">Impacto Medible en Nueva EPS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>1. Focus on Value<br>(Enfoque en el Valor)</strong></td>
-                <td>Creación de la <strong>Ventanilla "Turno Digital Express"</strong> sincronizada con la app móvil y código QR para entrega inmediata de fórmulas.</td>
-                <td>El valor en salud pública no es tener servidores rápidos, sino reducir la morbilidad y el desgaste del paciente, transformando horas de espera en tranquilidad y cumplimiento del tratamiento médico.</td>
-                <td><strong>Ahorro de 3.2 horas</strong> por trámite para el paciente. <strong>Disminución del 72%</strong> en PQRs radicadas ante la Superintendencia Nacional de Salud.</td>
-              </tr>
-              <tr>
-                <td><strong>2. Start Where You Are<br>(Empezar Donde Se Está)</strong></td>
-                <td>Desarrollo de un <strong>Middleware de Integración mediante Webhooks y APIs seguras</strong> que se conecta a los ERPs de inventario existentes en Audifarma, Cafam y Cruz Verde.</td>
-                <td>Descartar los sistemas POS e inventarios de los operadores farmacéuticos implicaría contratos multimillonarios y años de litigio. Integrar los sistemas legados permite obtener valor en menos de 90 días.</td>
-                <td><strong>Ahorro del 85%</strong> en costos de inversión tecnológica de integración (CapEx). Puesta en producción en tiempo récord sin interrumpir la operación actual.</td>
-              </tr>
-              <tr>
-                <td><strong>3. Progress Iteratively with Feedback<br>(Progresar Iterativamente con Retroalimentación)</strong></td>
-                <td>Despliegue del <strong>MVP 1.0 focalizado en los 50 medicamentos crónicos</strong> de mayor demanda en 20 sedes de Bogotá y Medellín, con micro-encuestas instantáneas post-atención.</td>
-                <td>Permite calibrar la precisión del inventario y el comportamiento del usuario en un entorno controlado antes de abrir la plataforma a los más de 10 millones de afiliados a nivel nacional.</td>
-                <td>Detección temprana de 14 cuellos de botella en bodega en los primeros 15 días, logrando un <strong>CSAT del 91.4%</strong> en el piloto.</td>
-              </tr>
-              <tr>
-                <td><strong>4. Collaborate and Promote Visibility<br>(Colaborar y Promover Visibilidad)</strong></td>
-                <td>Implementación de un <strong>Tablero Ejecutivo Centralizado (Executive Dashboard)</strong> para directivos y un <strong>Semáforo de Disponibilidad Público</strong> para pacientes.</td>
-                <td>La falta de visibilidad genera rumores, filas por pánico y compras ineficientes. Cuando el paciente y el regente ven el mismo dato en tiempo real, se erradica la fricción y se genera confianza institucional.</td>
-                <td><strong>Reducción del 55%</strong> de llamadas a la línea telefónica solicitando confirmación de medicamentos. Aplanamiento de horas pico en farmacias.</td>
-              </tr>
-              <tr>
-                <td><strong>5. Think and Work Holistically<br>(Pensar y Trabajar Holísticamente)</strong></td>
-                <td>Articulación integral entre la <strong>App Digital, el picking anticipado en bodega física de farmacia y la logística de última milla</strong> (domicilio para mayores de 70 años).</td>
-                <td>La tecnología aislada fracasa si los puntos físicos de dispensación no adaptan sus procesos de entrega. Se reconfiguró el espacio físico con filas exclusivas para reservas digitales.</td>
-                <td><strong>Incremento del 40%</strong> en la capacidad de atención en mostrador de las farmacias aliadas sin necesidad de contratar más personal físico.</td>
-              </tr>
-              <tr>
-                <td><strong>6. Keep It Simple and Practical<br>(Mantenerlo Simple y Práctico)</strong></td>
-                <td>Diseño UX/UI bajo la regla estricta de <strong>"3 Clics"</strong>, tipografía accesible con estándar WCAG 2.1 AA, modo Adulto Mayor y consulta vía WhatsApp para personas sin computador.</td>
-                <td>Más del 45% de los pacientes crónicos son adultos mayores o cuidadores de zonas vulnerables con poca alfabetización digital; una interfaz compleja causaría abandono inmediato.</td>
-                <td><strong>Tasa de adopción digital del 71.8%</strong>, superando ampliamente la meta proyectada del 65% en los primeros 6 meses.</td>
-              </tr>
-              <tr>
-                <td><strong>7. Optimize and Automate<br>(Optimizar y Automatizar)</strong></td>
-                <td>Implementación de <strong>Triggers automáticos de reabastecimiento en Cloud</strong> cuando el stock baja del 15%, y <strong>notificaciones push automatizadas a WhatsApp</strong> cuando arriba lote.</td>
-                <td>Sustituye llamadas manuales entre regentes y bodegas centrales por eventos en tiempo real, garantizando que el camión de reparto salga antes de que la sede quede desabastecida.</td>
-                <td><strong>Eliminación del 88%</strong> de desabastecimientos imprevistos en farmacias aliadas y fidelidad del inventario digital del 98.6%.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- =========================================================================
-         PESTAÑA 6: PITCH DE SUSTENTACIÓN EJECUTIVO (DIVIDIDO PARA 3 INTEGRANTES)
-         ========================================================================= -->
-    <div id="tab-pitch-sustentacion" class="tab-panel">
+    <div id="tab-pitch" class="tab-panel">
+      
       <div class="alert-banner">
         <div class="alert-banner-content">
           <h3>🎤 Pitch de Sustentación Ejecutiva ante la Junta Directiva</h3>
           <p>
-            Estructura balanceada y cronometrada para <strong>3 INTEGRANTES</strong> con una duración total de <strong>4 minutos y 30 segundos</strong> (dentro del rango reglamentario de 3 a 5 minutos). 
-            Incluye guión textual palabra por palabra, rol asignado, apoyo visual recomendado y temporizador de ensayo.
+            Estructura cronometrada para <strong>3 INTEGRANTES</strong> con una duración total de <strong>4 minutos y 30 segundos</strong> (dentro del rango de 3 a 5 min). 
+            Incluye guión textual palabra por palabra, roles asignados, apoyos visuales y temporizador interactivo de ensayo.
           </p>
         </div>
         <div>
-          <span class="badge badge-success">Formato: Junta Directiva Nueva EPS</span>
+          <span class="badge badge-success">Junta Directiva Nueva EPS</span>
         </div>
       </div>
 
-      <!-- Barra de Temporizador Interactivo para Ensayo -->
+      <!-- Temporizador del Pitch -->
       <div class="pitch-timer-bar">
         <div>
           <span style="font-size: 0.85rem; color: #93c5fd; text-transform: uppercase; font-weight: 700;">Cronómetro de Ensayo del Video (Meta: 3 a 5 min)</span>
@@ -1008,14 +952,14 @@
         </div>
       </div>
 
-      <!-- Intervención Integrante 1 -->
+      <!-- Integrante 1 -->
       <div class="pitch-speaker-card" style="border-left: 5px solid var(--primary);">
         <div class="pitch-speaker-header">
           <div class="speaker-meta">
             <div class="speaker-badge-num">1</div>
             <div class="speaker-name-role">
               <h4>INTEGRANTE 1: Contexto, Problemática Real y Dimensión Humana</h4>
-              <span>Rol: Director de Transformación del Servicio y Experiencia del Usuario | ⏱️ Tiempo: 1 minuto y 20 segundos (00:00 - 01:20)</span>
+              <span>Rol: Director de Transformación y Experiencia del Paciente | ⏱️ Tiempo: 1 minuto y 20 segundos (00:00 - 01:20)</span>
             </div>
           </div>
           <span class="badge badge-primary">Fase 1: Personas & Flujo</span>
@@ -1034,19 +978,19 @@
         </div>
 
         <div class="speech-tips">
-          <div><strong>📽️ Diapositiva de Apoyo:</strong> Fotos reales de filas en dispensarios de Nueva EPS vs. Gráfico del Flujo de Valor As-Is (210 min de espera).</div>
-          <div><strong>💡 Consejo de Oratoria:</strong> Postura firme, tono empático y enérgico. Mirar a la cámara como si se hablara al Presidente de la Junta.</div>
+          <div><strong>📽️ Diapositiva:</strong> Fotos reales de filas en dispensarios vs. Flujo As-Is (210 min perdidos).</div>
+          <div><strong>💡 Consejo de Oratoria:</strong> Tono empático y enérgico. Mirar a la cámara con convicción.</div>
         </div>
       </div>
 
-      <!-- Intervención Integrante 2 -->
+      <!-- Integrante 2 -->
       <div class="pitch-speaker-card" style="border-left: 5px solid var(--secondary);">
         <div class="pitch-speaker-header">
           <div class="speaker-meta">
             <div class="speaker-badge-num">2</div>
             <div class="speaker-name-role">
               <h4>INTEGRANTE 2: Arquitectura Tecnológica, 7 Principios ITIL 4 y Demostración</h4>
-              <span>Rol: Arquitecto Principal de Soluciones y Sistemas de Información | ⏱️ Tiempo: 1 minuto y 40 segundos (01:20 - 03:00)</span>
+              <span>Rol: Arquitecto Principal de Soluciones TIC | ⏱️ Tiempo: 1 minuto y 40 segundos (01:20 - 03:00)</span>
             </div>
           </div>
           <span class="badge badge-info">Fase 2: Arquitectura & Demo</span>
@@ -1057,7 +1001,7 @@
             <em>"Gracias. Para materializar esta visión sin incurrir en costos astronómicos, nos basamos en el principio ITIL <strong>'Empezar donde se está'</strong>. Nueva EPS no necesita cambiar el software de inventario de cada farmacia aliada. Diseñamos una <strong>arquitectura desacoplada en la nube (AWS) con un Middleware de Integración</strong> que consume en tiempo real los inventarios de Audifarma, Cafam y Cruz Verde mediante APIs seguras bajo el estándar internacional <strong>HL7 FHIR</strong>.</em>
           </p>
           <p style="margin-top: 8px;">
-            <em>Siguiendo el principio <strong>'Mantenerlo simple y práctico'</strong>, creamos una experiencia inclusiva de <strong>solo 3 clics</strong> pensada para adultos mayores: 1) El paciente ingresa su documento, 2) Visualiza en un semáforo interactivo en qué farmacia cercana hay existencias reales hoy, y 3) Reserva su dosis obteniendo un <strong>Turno Digital Express con código QR</strong> y confirmación automática por WhatsApp.</em>
+            <em>Siguiendo el principio <strong>'Mantenerlo simple y práctico'</strong>, creamos una experiencia inclusiva de <strong>solo 3 clics</strong> pensada para adultos mayores: 1) El paciente ingresa su documento, 2) Visualiza en un semáforo interactivo en tiempo real en qué farmacia cercana hay existencias reales hoy, y 3) Reserva su dosis obteniendo un <strong>Turno Digital Express con código QR</strong> y confirmación automática por WhatsApp.</em>
           </p>
           <p style="margin-top: 8px;">
             <em>Además, con el principio <strong>'Optimizar y automatizar'</strong>, si un medicamento se agota, el sistema activa alertas tempranas de reabastecimiento en bodega y notifica automáticamente al celular del usuario cuando el lote ingresa al dispensario. Esta plataforma es completamente funcional y está desplegada en producción sobre GitHub Pages y microservicios Cloud."</em>
@@ -1065,12 +1009,12 @@
         </div>
 
         <div class="speech-tips">
-          <div><strong>📽️ Diapositiva / Pantalla:</strong> Mostrar en vivo el prototipo web interactivo (los 3 clics, el código QR generado y la simulación de WhatsApp).</div>
-          <div><strong>💡 Consejo de Oratoria:</strong> Tono técnico pero accesible. Demostrar solvencia de ingeniería al explicar la arquitectura sin perder a la junta.</div>
+          <div><strong>📽️ Diapositiva:</strong> Compartir pantalla mostrando la Pestaña 6 (Prototipo Interactivo en 3 clics y tique QR).</div>
+          <div><strong>💡 Consejo de Oratoria:</strong> Tono fluido, interactuando en vivo con la web para cautivar a la audiencia.</div>
         </div>
       </div>
 
-      <!-- Intervención Integrante 3 -->
+      <!-- Integrante 3 -->
       <div class="pitch-speaker-card" style="border-left: 5px solid var(--accent-green);">
         <div class="pitch-speaker-header">
           <div class="speaker-meta">
@@ -1099,60 +1043,38 @@
         </div>
 
         <div class="speech-tips">
-          <div><strong>📽️ Diapositiva de Apoyo:</strong> Gráfica del Dashboard de KPIs (SLA 99.94%, -64.2% filas, CSAT 91.4%) y tabla de Retorno de Inversión (ROI).</div>
-          <div><strong>💡 Consejo de Oratoria:</strong> Cierre contundente y persuasivo. Hacer énfasis en las cifras monetarias y de satisfacción del paciente.</div>
-        </div>
-      </div>
-
-      <!-- Guía de Preguntas Frecuentes de la Junta Directiva (Respuestas Preparadas) -->
-      <div class="card">
-        <h4 class="card-title">❓ Preguntas Previstas de la Junta Directiva y Respuestas Preparadas</h4>
-        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
-          <div style="background: var(--bg-subtle); padding: 14px; border-radius: var(--radius-md);">
-            <strong style="color: var(--primary);">Pregunta 1: "¿Qué pasa si un adulto mayor en una zona rural no tiene celular inteligente?"</strong>
-            <p style="font-size: 0.88rem; margin-top: 4px; color: var(--text-main);">
-              <strong>Respuesta del equipo:</strong> Pensamos de manera holística (Principio 5). Para este segmento habilitamos la consulta gratuita vía mensaje de texto SMS tradicional, la reserva telefónica automatizada en el conmutador y tótem físico táctil asistido en la entrada de las sedes de Nueva EPS atendido por personal de orientadores.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-subtle); padding: 14px; border-radius: var(--radius-md);">
-            <strong style="color: var(--primary);">Pregunta 2: "¿Cómo aseguramos que Audifarma o Cruz Verde realmente reporten su inventario con veracidad?"</strong>
-            <p style="font-size: 0.88rem; margin-top: 4px; color: var(--text-main);">
-              <strong>Respuesta del equipo:</strong> En la dimensión de <em>Socios y Proveedores</em>, los contratos de dispensación se modificaron integrando Acuerdos de Nivel Operacional (OLAs). Cada vez que un usuario acude con turno y no encuentra el producto reportado en verde, se genera una discrepancia auditada que descuenta penalidades automáticas en la liquidación mensual del operador logístico.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-subtle); padding: 14px; border-radius: var(--radius-md);">
-            <strong style="color: var(--primary);">Pregunta 3: "¿Cómo se financia y cuánto cuesta la infraestructura en GitHub Pages y Cloud?"</strong>
-            <p style="font-size: 0.88rem; margin-top: 4px; color: var(--text-main);">
-              <strong>Respuesta del equipo:</strong> El frontend estático opera sin costo de servidor en GitHub Pages con alta disponibilidad global vía CDN. La capa de backend utiliza arquitectura Serverless (AWS Lambda y DynamoDB) con un costo por consumo aproximado de \$0.002 dólares por cada 1,000 consultas, representando menos del 1% del costo operativo de imprimir tiquetes de papel y pagar vigilantes de fila.
-            </p>
-          </div>
+          <div><strong>📽️ Diapositiva:</strong> Gráficas de KPIs de la Pestaña 3 y cuadro de Retorno de Inversión (350% ROI).</div>
+          <div><strong>💡 Consejo de Oratoria:</strong> Cierre firme, convincente y con llamado claro a la acción ejecutiva.</div>
         </div>
       </div>
     </div>
 
 
     <!-- =========================================================================
-         PESTAÑA 7: BIBLIOGRAFÍA MODERNA, ACCESIBLE Y PROYECTOS SIMILARES
+         PESTAÑA 5: BIBLIOGRAFÍA & BENCHMARK DE PROYECTOS SIMILARES
          ========================================================================= -->
-    <div id="tab-bibliography" class="tab-panel">
+    <div id="tab-bibliografia" class="tab-panel">
+      
       <div class="alert-banner">
         <div class="alert-banner-content">
-          <h3>📚 Referencias Bibliográficas Modernas y Análisis de Casos Similares</h3>
+          <h3>📚 Referencias Bibliográficas y Benchmark de Proyectos Similares</h3>
           <p>
-            Fuentes científicas, marcos metodológicos de gestión de servicios (ITIL 4), normatividad sanitaria colombiana 
-            y análisis comparativo de proyectos del sector farmacéutico y salud digital.
+            Fundamentación científica y normativa en formato APA 7.ª Edición y análisis comparativo con proyectos líderes del sector farmacéutico 
+            y de salud digital en Colombia y el mundo.
           </p>
         </div>
         <div>
-          <span class="badge badge-primary">Formato APA 7.ª Edición</span>
+          <span class="badge badge-primary">APA 7.ª Edición</span>
         </div>
       </div>
 
-      <!-- Proyectos Similares Reales Analizados (Benchmark) -->
+      <!-- Benchmark -->
       <div class="card">
-        <h4 class="card-title">🔍 Benchmark de Proyectos Similares y Lecciones Aprendidas</h4>
+        <div class="card-header">
+          <h3 class="card-title">🔍 Benchmark de Proyectos Similares y Lecciones de Ingeniería</h3>
+          <span class="badge badge-info">Investigación de Referentes</span>
+        </div>
+
         <div class="table-responsive">
           <table class="academic-table">
             <thead>
@@ -1198,9 +1120,9 @@
         </div>
       </div>
 
-      <!-- Listado de Bibliografía en Formato APA 7 -->
+      <!-- Bibliografía APA 7 -->
       <div class="card">
-        <h4 class="card-title">📖 Bibliografía Académica y Normativa Oficial</h4>
+        <h3 class="card-title" style="margin-bottom: 14px;">📖 Bibliografía Académica y Normativa Oficial</h3>
 
         <div class="biblio-card">
           <div class="biblio-title">1. Marco Metodológico Central de Gestión de Servicios TIC</div>
@@ -1208,57 +1130,218 @@
             Axelos. (2019). <em>ITIL Foundation: ITIL 4 Edition</em>. TSO (The Stationery Office). Norwich, Reino Unido. ISBN: 978-0113316076.
           </div>
           <div class="biblio-relevance">
-            Aporte al proyecto: Fundamentación teórica de las Cuatro Dimensiones de la Gestión del Servicio y los Siete Principios Guía aplicados a la reingeniería de medicamentos en Nueva EPS.
+            Aporte: Estructuración de las 4 Dimensiones del Servicio y los 7 Principios Guía aplicados a la reingeniería de Nueva EPS.
           </div>
         </div>
 
         <div class="biblio-card">
-          <div class="biblio-title">2. Estándar de Interoperabilidad en Salud</div>
+          <div class="biblio-title">2. Estándar Global de Interoperabilidad en Salud</div>
           <div class="biblio-citation">
-            HL7 International. (2023). <em>Fast Healthcare Interoperability Resources (FHIR) Release 5</em>. Health Level Seven International. Ann Arbor, MI. Recuperado de <a href="https://hl7.org/fhir/" target="_blank" style="color: var(--secondary);">https://hl7.org/fhir/</a>
+            HL7 International. (2023). <em>Fast Healthcare Interoperability Resources (FHIR) Release 5</em>. Ann Arbor, MI. Recuperado de <a href="https://hl7.org/fhir/" target="_blank" style="color: var(--secondary);">https://hl7.org/fhir/</a>
           </div>
           <div class="biblio-relevance">
-            Aporte al proyecto: Estructuración de los esquemas de intercambio de datos (Resources: MedicationRequest, MedicationDispense) entre la EPS y las farmacias asociadas.
+            Aporte: Definición del modelo de datos e intercambio de APIs para recursos de prescripción y dispensación farmacológica.
           </div>
         </div>
 
         <div class="biblio-card">
           <div class="biblio-title">3. Normativa Sanitaria Colombiana para Fórmulas y Medicamentos</div>
           <div class="biblio-citation">
-            Ministerio de Salud y Protección Social de Colombia. (2020). <em>Resolución 521 de 2020: Por la cual se adopta el protocolo de bioseguridad y entrega de medicamentos a domicilio durante emergencias de salud</em>. Diario Oficial No. 51.270. Bogotá D.C.
+            Ministerio de Salud y Protección Social de Colombia. (2020). <em>Resolución 521 de 2020: Procedimiento de entrega de medicamentos a domicilio y prescripción digital</em>. Diario Oficial No. 51.270. Bogotá D.C.
           </div>
           <div class="biblio-relevance">
-            Aporte al proyecto: Marco legal que autoriza la prescripción digital, validación por teleorientación y entrega prioritaria a mayores de 70 años y pacientes crónicos.
+            Aporte: Marco regulatorio que habilita la entrega domiciliaria prioritaria a mayores de 70 años y teleorientación en salud.
           </div>
         </div>
 
         <div class="biblio-card">
-          <div class="biblio-title">4. Ley de Protección de Datos Personales y Habeas Data en Colombia</div>
+          <div class="biblio-title">4. Ley de Protección de Datos Personales en Colombia</div>
           <div class="biblio-citation">
-            Congreso de la República de Colombia. (2012). <em>Ley Estatutaria 1581 de 2012: Régimen General de Protección de Datos Personales</em>. Diario Oficial No. 48.587. Bogotá D.C.
+            Congreso de la República de Colombia. (2012). <em>Ley Estatutaria 1581 de 2012: Régimen General de Protección de Datos Personales (Habeas Data)</em>. Bogotá D.C.
           </div>
           <div class="biblio-relevance">
-            Aporte al proyecto: Diseño de la arquitectura de seguridad, cifrado AES-256 y enmascaramiento de diagnósticos CIE-10 para preservar la confidencialidad médica del usuario.
+            Aporte: Criterios legales para el tratamiento seguro de datos médicos sensibles, cifrado AES-256 y anonimización de diagnósticos CIE-10.
           </div>
         </div>
 
         <div class="biblio-card">
-          <div class="biblio-title">5. Gestión de Servicios de TI y Estándares de Calidad</div>
+          <div class="biblio-title">5. Estándares Internacionales de Calidad en Servicios de TI</div>
           <div class="biblio-citation">
-            International Organization for Standardization. (2018). <em>Information technology — Service management — Part 1: Service management system requirements (ISO/IEC 20000-1:2018)</em>. ISO. Ginebra, Suiza.
+            International Organization for Standardization. (2018). <em>ISO/IEC 20000-1:2018: Information technology — Service management system requirements</em>. Ginebra, Suiza: ISO.
           </div>
           <div class="biblio-relevance">
-            Aporte al proyecto: Formulación de los SLAs de disponibilidad 24/7 (99.9%), tiempos máximos de restauración (MTTR) y auditorías de inventario continuo.
+            Aporte: Formulación de los SLAs de disponibilidad 24/7 (99.9%), tiempos máximos de restauración (MTTR) y gobernanza de incidentes.
           </div>
         </div>
 
         <div class="biblio-card">
           <div class="biblio-title">6. Transformación Digital e Indicadores de Madurez en Salud</div>
           <div class="biblio-citation">
-            HIMSS. (2024). <em>Digital Health Indicator (DHI): Governance, Workforce, Interoperability and Person-Enabled Care</em>. Healthcare Information and Management Systems Society. Chicago, IL.
+            HIMSS. (2024). <em>Digital Health Indicator (DHI): Governance, Workforce, Interoperability and Person-Enabled Care</em>. Chicago, IL: HIMSS Media.
           </div>
           <div class="biblio-relevance">
-            Aporte al proyecto: Métricas de adopción digital omnicanal y empoderamiento del paciente en la autogestión de sus tratamientos crónicos.
+            Aporte: Métricas de adopción omnicanal y empoderamiento del paciente en la autogestión de sus tratamientos médicos crónicos.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- =========================================================================
+         PESTAÑA 6: PROTOTIPO INTERACTIVO DEL SERVICIO (PORTAL EN 3 CLICS)
+         ========================================================================= -->
+    <div id="tab-prototipo" class="tab-panel">
+      
+      <div class="alert-banner">
+        <div class="alert-banner-content">
+          <h3>📱 Prototipo Interactivo del Servicio (Portal del Paciente en 3 Clics)</h3>
+          <p>
+            Demostración funcional y accesible del principio <strong>"Mantenerlo simple y práctico"</strong>: 
+            consulta en tiempo real de inventarios, generación de <strong>Turno Digital Express con código QR</strong> y simulación de notificaciones por WhatsApp.
+          </p>
+        </div>
+        <div>
+          <span class="badge badge-success">● Prototipo 100% Interactivo</span>
+        </div>
+      </div>
+
+      <!-- Pasos de los 3 Clics -->
+      <div class="steps-indicator">
+        <div class="step-item active" data-step="1">
+          <div class="step-circle">1</div>
+          <span class="step-label">Identificación & Fórmula</span>
+        </div>
+        <div class="step-item" data-step="2">
+          <div class="step-circle">2</div>
+          <span class="step-label">Consulta de Stock en Sedes</span>
+        </div>
+        <div class="step-item" data-step="3">
+          <div class="step-circle">3</div>
+          <span class="step-label">Turno Digital & Notificación</span>
+        </div>
+      </div>
+
+      <div class="search-grid">
+        <!-- Columna Izquierda: Clic 1 y Tique -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">🔍 Clic 1: Consulta de Afiliado y Fórmulas</h3>
+                <p class="card-subtitle">Ingresa tu documento para cargar tus prescripciones MIPRES autorizadas.</p>
+              </div>
+              <span class="badge badge-primary">Autenticación Segura</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-doc">Número de Documento de Identidad (C.C. / T.I. / C.E.):</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="input-doc" class="form-input" placeholder="Ej: 1020304050" value="1020304050">
+                <button id="btn-search-stock" class="btn btn-primary">
+                  <span>Consultar</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Botones de Demostración Inmediata -->
+            <div style="margin-top: 10px;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Probar casos reales pre-cargados con 1 clic:</span>
+              <div class="quick-demo-buttons">
+                <button class="quick-demo-btn" onclick="loadSamplePrescription('1020304050')">
+                  👤 Juan Morales (Hipertensión / Losartán)
+                </button>
+                <button class="quick-demo-btn" onclick="loadSamplePrescription('52418933')">
+                  👵 Gladys Gómez (Adulto Mayor / Metformina e Insulina)
+                </button>
+                <button class="quick-demo-btn" onclick="loadSamplePrescription('1098765432')">
+                  🧑 Andrés Cardona (Asma / Salbutamol)
+                </button>
+              </div>
+            </div>
+
+            <!-- Tarjeta de Fórmula Activa del Paciente -->
+            <div id="patient-prescription-card" style="margin-top: 18px; padding: 14px; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <!-- Dinámico por app.js -->
+            </div>
+
+            <!-- Filtros de Consulta -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+              <div class="form-group">
+                <label class="form-label" for="select-city">Ciudad / Municipio:</label>
+                <select id="select-city" class="form-select">
+                  <option value="Bogota">Bogotá D.C.</option>
+                  <option value="Medellin">Medellín</option>
+                  <option value="Cali">Cali</option>
+                  <option value="Barranquilla">Barranquilla</option>
+                  <option value="all">Todas las Sedes del País</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="select-medicine">Medicamento Seleccionado:</label>
+                <select id="select-medicine" class="form-select">
+                  <option value="losartan-50">Losartán Potásico 50 mg</option>
+                  <option value="metformina-850">Metformina Clorhidrato 850 mg</option>
+                  <option value="insulina-glargina">Insulina Glargina 100 UI/ml</option>
+                  <option value="atorvastatina-20">Atorvastatina 20 mg</option>
+                  <option value="levotiroxina-50">Levotiroxina Sódica 50 mcg</option>
+                  <option value="acetaminofen-500">Acetaminofén 500 mg</option>
+                  <option value="omeprazol-20">Omeprazol 20 mg</option>
+                  <option value="salbutamol-100">Salbutamol Inhalador 100 mcg</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tique con QR Generado Dinámicamente -->
+          <div id="ticket-result-box" style="display: none; margin-bottom: 24px;">
+            <!-- Renderizado dinámico en app.js -->
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Clic 2 Sedes y Simulador WhatsApp -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">📍 Clic 2: Disponibilidad en Farmacias Aliadas</h3>
+                <p class="card-subtitle">Inventario centralizado y sincronizado mediante Middleware Cloud.</p>
+              </div>
+              <span class="badge badge-success">● Datos en Vivo</span>
+            </div>
+
+            <div id="pharmacies-container" class="pharmacy-list">
+              <!-- Inyectado dinámicamente por JavaScript -->
+            </div>
+          </div>
+
+          <!-- Simulador de WhatsApp -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">📲 Notificaciones WhatsApp Business Cloud API</h3>
+                <p class="card-subtitle">Confirmación de turno express y alertas automáticas de arribo de stock.</p>
+              </div>
+              <span class="badge badge-info">Principio ITIL 7</span>
+            </div>
+
+            <div class="chat-simulator-card">
+              <div class="chat-sim-header">
+                <div class="chat-sim-avatar">NE</div>
+                <div>
+                  <h4 style="font-size: 0.95rem; margin: 0; line-height: 1.2;">Nueva EPS - Farmacia Oficial</h4>
+                  <span style="font-size: 0.72rem; color: #dcfce7;">● Cuenta Verificada Oficial</span>
+                </div>
+              </div>
+              <div id="chat-simulator-messages" class="chat-sim-body">
+                <div class="chat-bubble">
+                  <strong>Hola Juan Esteban, bienvenido al canal de dispensación Nueva EPS.</strong>
+                  <p style="margin-top: 4px;">Al reservar tu turno digital aquí o en el portal web, recibirás tu código de acceso con la hora recomendada para evitar colas.</p>
+                  <span class="time">10:00 a. m. ✓✓</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1266,24 +1349,23 @@
 
   </main>
 
-  <!-- Pie de Página Institucional -->
+  <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-text">
         <h5>Transformación Digital del Servicio de Medicamentos • Nueva EPS</h5>
         <p>Proyecto de Formulación y Evaluación de Proyectos TIC | Ingeniería de Sistemas y Computación</p>
         <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 4px;">
-          Desarrollado con Arquitectura ITIL 4, HTML5/CSS3 moderno y desplegable de forma gratuita e inmediata en <strong>GitHub Pages</strong>.
+          Desarrollado bajo el marco ITIL 4, HTML5/CSS3 moderno y desplegado en <strong>GitHub Pages</strong>.
         </p>
       </div>
 
       <div>
-        <span class="badge badge-success" style="font-size: 0.85rem;">Lista para Despliegue en GitHub Pages</span>
+        <span class="badge badge-success" style="font-size: 0.85rem;">Despliegue en GitHub Pages Activo</span>
       </div>
     </div>
   </footer>
 
-  <!-- Script Principal de Lógica y Datos -->
   <script src="app.js"></script>
 </body>
 </html>
